@@ -1,0 +1,2781 @@
+{
+ "url": "prototipos/v2/index.html",
+ "at": "2026-10-19T15:59:58.499Z",
+ "allow": [],
+ "viewports": [
+  {
+   "width": 1440,
+   "height": 900,
+   "load": "load",
+   "screens": 8,
+   "filled": [
+    0.8,
+    0.83,
+    0.83,
+    0.83,
+    0.82,
+    0.83,
+    0.83,
+    0.83
+   ],
+   "motion": {
+    "elements": 33,
+    "css": 17,
+    "transitions": 16,
+    "scripted": 0,
+    "videos": 9,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "page": {
+     "height": 6625,
+     "screens": 7.4,
+     "words": 505,
+     "img": 49,
+     "video": 9,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 8,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 15,
+     "videoCount": 9,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "760?grayscale",
+      "900?grayscale",
+      "875?grayscale",
+      "400?grayscale",
+      "400?grayscale",
+      "400?grayscale"
+     ],
+     "blendText": 0,
+     "sideScrollers": 1,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 7
+    },
+    "hero": {
+     "text": "Somark Mídia : agência de marketing digital",
+     "words": 7,
+     "chars": 43,
+     "lines": 1,
+     "size": 190.5,
+     "vw": 13.2,
+     "font": "Fraunces",
+     "weight": 600,
+     "tracking": -0.045,
+     "leading": 0.8,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.67,
+     "top": 18,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Somark Mídia : agência de marketing digital",
+     "words": 7,
+     "lines": 1,
+     "size": 190.5,
+     "font": "Fraunces"
+    },
+    "headings": [
+     {
+      "text": "Somark Mídia : agência de marketing digital",
+      "words": 7,
+      "chars": 43,
+      "lines": 1,
+      "size": 190.5,
+      "vw": 13.2,
+      "font": "Fraunces",
+      "weight": 600,
+      "tracking": -0.045,
+      "leading": 0.8,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.67,
+      "top": 18,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "+95%",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 31.8,
+      "vw": 2.2,
+      "font": "Fraunces",
+      "weight": 600,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.18,
+      "top": 282,
+      "tag": "strong",
+      "kind": "heading"
+     },
+     {
+      "text": "+35%",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 31.8,
+      "vw": 2.2,
+      "font": "Fraunces",
+      "weight": 600,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.18,
+      "top": 392,
+      "tag": "strong",
+      "kind": "heading"
+     },
+     {
+      "text": "+65%",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 31.8,
+      "vw": 2.2,
+      "font": "Fraunces",
+      "weight": 600,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.18,
+      "top": 502,
+      "tag": "strong",
+      "kind": "heading"
+     },
+     {
+      "text": "Marketing digital é mais do que números. Somos uma agência criativa e orientada por dados.",
+      "words": 15,
+      "chars": 90,
+      "lines": 3,
+      "size": 31.8,
+      "vw": 2.2,
+      "font": "Fraunces",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.37,
+      "top": 676,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "Quatro frentes que somam.",
+      "words": 4,
+      "chars": 25,
+      "lines": 2,
+      "size": 58.8,
+      "vw": 4.1,
+      "font": "Fraunces",
+      "weight": 600,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.37,
+      "top": 873,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Gestão de redes",
+      "words": 3,
+      "chars": 15,
+      "lines": 1,
+      "size": 31.8,
+      "vw": 2.2,
+      "font": "Fraunces",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.37,
+      "top": 879,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Estratégia",
+      "words": 1,
+      "chars": 10,
+      "lines": 1,
+      "size": 31.8,
+      "vw": 2.2,
+      "font": "Fraunces",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.37,
+      "top": 1093,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Criação de conteúdo",
+      "words": 3,
+      "chars": 19,
+      "lines": 1,
+      "size": 31.8,
+      "vw": 2.2,
+      "font": "Fraunces",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.37,
+      "top": 1308,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Filmagens e fotos",
+      "words": 3,
+      "chars": 17,
+      "lines": 1,
+      "size": 31.8,
+      "vw": 2.2,
+      "font": "Fraunces",
+      "weight": 600,
+      "tracking": -0.02,
+      "leading": 1.1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.37,
+      "top": 1522,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Portfólio",
+      "words": 1,
+      "chars": 9,
+      "lines": 1,
+      "size": 58.8,
+      "vw": 4.1,
+      "font": "Fraunces",
+      "weight": 600,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.16,
+      "top": 1731,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Como trabalhamos",
+      "words": 2,
+      "chars": 16,
+      "lines": 1,
+      "size": 58.8,
+      "vw": 4.1,
+      "font": "Fraunces",
+      "weight": 600,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.39,
+      "top": 2905,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Briefing",
+      "words": 1,
+      "chars": 8,
+      "lines": 1,
+      "size": 58.8,
+      "vw": 4.1,
+      "font": "Fraunces",
+      "weight": 600,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.45,
+      "top": 2996,
+      "tag": "button",
+      "kind": "heading"
+     },
+     {
+      "text": "Marcas que confiam no nosso trabalho",
+      "words": 6,
+      "chars": 36,
+      "lines": 2,
+      "size": 58.8,
+      "vw": 4.1,
+      "font": "Fraunces",
+      "weight": 600,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.38,
+      "top": 3484,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Escolha o seu plano",
+      "words": 4,
+      "chars": 19,
+      "lines": 1,
+      "size": 58.8,
+      "vw": 4.1,
+      "font": "Fraunces",
+      "weight": 600,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.39,
+      "top": 3998,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "LITE",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 31.8,
+      "vw": 2.2,
+      "font": "Fraunces",
+      "weight": 600,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.19,
+      "top": 4085,
+      "tag": "th",
+      "kind": "heading"
+     },
+     {
+      "text": "PRO",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 31.8,
+      "vw": 2.2,
+      "font": "Fraunces",
+      "weight": 600,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.15,
+      "top": 4085,
+      "tag": "th",
+      "kind": "heading"
+     },
+     {
+      "text": "PRIME",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 31.8,
+      "vw": 2.2,
+      "font": "Fraunces",
+      "weight": 600,
+      "tracking": -0.03,
+      "leading": 1,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.18,
+      "top": 4085,
+      "tag": "th",
+      "kind": "heading"
+     },
+     {
+      "text": "Quem está por trás",
+      "words": 4,
+      "chars": 18,
+      "lines": 2,
+      "size": 58.8,
+      "vw": 4.1,
+      "font": "Fraunces",
+      "weight": 600,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.32,
+      "top": 4839,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "“Nunca enxerguei o cotidiano como algo comum.”",
+      "words": 7,
+      "chars": 46,
+      "lines": 3,
+      "size": 31.8,
+      "vw": 2.2,
+      "font": "Fraunces",
+      "weight": 500,
+      "tracking": -0.015,
+      "leading": 1.15,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "right",
+      "widthRatio": 0.24,
+      "top": 5011,
+      "tag": "p",
+      "kind": "statement"
+     },
+     {
+      "text": "Vamos crescer juntos?",
+      "words": 3,
+      "chars": 21,
+      "lines": 1,
+      "size": 58.8,
+      "vw": 4.1,
+      "font": "Fraunces",
+      "weight": 600,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.78,
+      "top": 5690,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "S o m a r k",
+      "words": 6,
+      "chars": 11,
+      "lines": 1,
+      "size": 190.5,
+      "vw": 13.2,
+      "font": "Fraunces",
+      "weight": 600,
+      "tracking": 0,
+      "leading": 0.78,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.78,
+      "top": 6210,
+      "tag": "div",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 22,
+     "maxLines": 3,
+     "over2Lines": 0,
+     "statements": 2,
+     "centered": 0,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Montserrat",
+       "share": 0.87,
+       "mono": false
+      },
+      {
+       "family": "Fraunces",
+       "share": 0.13,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      14,
+      17,
+      32,
+      59,
+      191
+     ],
+     "sizeCount": 5,
+     "notLoaded": [],
+     "body": {
+      "font": "Montserrat",
+      "size": 17,
+      "leading": 1.5,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 13.9
+     },
+     "measureChars": 38,
+     "max": {
+      "size": 190.5,
+      "vw": 13.2,
+      "font": "Fraunces",
+      "text": "Somark Mídia"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.01,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#e4eae3",
+     "bodyBgHsl": {
+      "h": 111,
+      "s": 0.14,
+      "l": 0.9
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#dce6d9",
+       "top": 817,
+       "hsl": {
+        "h": 106,
+        "s": 0.21,
+        "l": 0.88
+       }
+      },
+      {
+       "color": "#19221b",
+       "top": 1675,
+       "hsl": {
+        "h": 133,
+        "s": 0.15,
+        "l": 0.12
+       }
+      },
+      {
+       "color": "#f6f9f5",
+       "top": 2849,
+       "hsl": {
+        "h": 105,
+        "s": 0.25,
+        "l": 0.97
+       }
+      },
+      {
+       "color": "#3e533d",
+       "top": 5484,
+       "hsl": {
+        "h": 117,
+        "s": 0.15,
+        "l": 0.28
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#0f1a12",
+       "share": 0.43
+      },
+      {
+       "color": "#f2f7f3",
+       "share": 0.24
+      },
+      {
+       "color": "#3c4a3f",
+       "share": 0.16
+      },
+      {
+       "color": "#d3dfd0",
+       "share": 0.16
+      },
+      {
+       "color": "#f6f9f5",
+       "share": 0
+      }
+     ],
+     "button": {
+      "bg": "#0f1a12",
+      "hsl": {
+       "h": 136,
+       "s": 0.27,
+       "l": 0.08
+      },
+      "fg": "#f2f7f3"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 9,
+     "inHero": 5,
+     "radius": 6,
+     "height": 64,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Pular para o conteúdo",
+      "Serviços",
+      "Portfólio",
+      "Planos",
+      "Contato"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 86,
+     "boxRadius": 6,
+     "squareMedia": 0,
+     "roundedMedia": 9,
+     "mediaRadius": 6,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 5,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 1675
+      },
+      {
+       "count": 5,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 268
+      },
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 817
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.17
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": false,
+     "height": 0,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "fraunces",
+     "montserrat",
+     "phosphor",
+     "phosphor-fill"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 1440,
+     "h": 900
+    },
+    "pageH": 6625,
+    "margins": {
+     "left": 132,
+     "right": 156
+    },
+    "sections": [
+     {
+      "sel": "section.hero",
+      "tag": "section",
+      "top": 12,
+      "height": 797,
+      "words": 49,
+      "media": 2,
+      "middle": 26,
+      "heading": {
+       "text": "+95%",
+       "size": 32,
+       "tag": "strong"
+      },
+      "left": 132,
+      "right": 231,
+      "textLeft": 150,
+      "textRight": 231,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#servicos.fronts",
+      "tag": "section",
+      "top": 817,
+      "height": 850,
+      "words": 98,
+      "media": 0,
+      "middle": 55,
+      "heading": {
+       "text": "Quatro frentes",
+       "size": 59,
+       "tag": "h2"
+      },
+      "left": 156,
+      "right": 165,
+      "textLeft": 156,
+      "textRight": 165,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#portfolio.work.tile",
+      "tag": "section",
+      "top": 1675,
+      "height": 1166,
+      "words": 53,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Portfólio",
+       "size": 59,
+       "tag": "h2"
+      },
+      "left": 156,
+      "right": 156,
+      "textLeft": 156,
+      "textRight": 156,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#metodo.method.tile",
+      "tag": "section",
+      "top": 2849,
+      "height": 570,
+      "words": 39,
+      "media": 0,
+      "middle": 8,
+      "heading": {
+       "text": "Como trabalhamos",
+       "size": 59,
+       "tag": "h2"
+      },
+      "left": 156,
+      "right": 156,
+      "textLeft": 156,
+      "textRight": 177,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.proof",
+      "tag": "section",
+      "top": 3428,
+      "height": 506,
+      "words": 6,
+      "media": 0,
+      "middle": 2212,
+      "heading": {
+       "text": "Marcas que confiam no nosso trabalho",
+       "size": 59,
+       "tag": "h2"
+      },
+      "left": 0,
+      "right": 0,
+      "textLeft": 156,
+      "textRight": 782,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#planos.plans.tile",
+      "tag": "section",
+      "top": 3942,
+      "height": 833,
+      "words": 99,
+      "media": 0,
+      "middle": 64,
+      "heading": {
+       "text": "Escolha o seu plano",
+       "size": 59,
+       "tag": "h2"
+      },
+      "left": 156,
+      "right": 196,
+      "textLeft": 156,
+      "textRight": 196,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.about",
+      "tag": "section",
+      "top": 4783,
+      "height": 693,
+      "words": 77,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Quem está por trás",
+       "size": 59,
+       "tag": "h2"
+      },
+      "left": 132,
+      "right": 165,
+      "textLeft": 156,
+      "textRight": 165,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#contato.contact.tile",
+      "tag": "section",
+      "top": 5484,
+      "height": 462,
+      "words": 29,
+      "media": 3,
+      "middle": 8,
+      "heading": {
+       "text": "Vamos crescer juntos?",
+       "size": 59,
+       "tag": "h2"
+      },
+      "left": 132,
+      "right": 0,
+      "textLeft": 156,
+      "textRight": 160,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer.foot.tile",
+      "tag": "footer",
+      "top": 5955,
+      "height": 659,
+      "words": 40,
+      "media": 0,
+      "middle": 222,
+      "heading": null,
+      "left": 156,
+      "right": 170,
+      "textLeft": 156,
+      "textRight": 170,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [
+     {
+      "top": 6168,
+      "height": 392
+     }
+    ],
+    "h1s": [
+     {
+      "text": "Somark Mídia : agência de marketing digital",
+      "size": 191,
+      "top": 18,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 156,
+      "n": 9
+     },
+     {
+      "x": 748,
+      "n": 6
+     },
+     {
+      "x": 176,
+      "n": 2
+     },
+     {
+      "x": 819,
+      "n": 2
+     },
+     {
+      "x": 235,
+      "n": 1
+     },
+     {
+      "x": 390,
+      "n": 1
+     },
+     {
+      "x": 452,
+      "n": 1
+     },
+     {
+      "x": 629,
+      "n": 1
+     },
+     {
+      "x": 1026,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 24,
+    "bodySize": 17,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0.11,
+    "voidBox": {
+     "x": 1260,
+     "y": 120,
+     "w": 180,
+     "h": 780
+    }
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 768,
+   "height": 1024,
+   "load": "load",
+   "screens": 10,
+   "filled": [
+    1,
+    1,
+    0.93,
+    1,
+    1,
+    1,
+    0.99,
+    1,
+    1,
+    1
+   ],
+   "motion": {
+    "elements": 33,
+    "css": 17,
+    "transitions": 16,
+    "scripted": 0,
+    "videos": 9,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "page": {
+     "height": 9906,
+     "screens": 9.7,
+     "words": 496,
+     "img": 49,
+     "video": 9,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 8,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 12,
+     "videoCount": 9,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "760?grayscale",
+      "900?grayscale",
+      "875?grayscale"
+     ],
+     "blendText": 0,
+     "sideScrollers": 1,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 9
+    },
+    "hero": {
+     "text": "Somark Mídia : agência de marketing digital",
+     "words": 7,
+     "chars": 43,
+     "lines": 1,
+     "size": 114.6,
+     "vw": 14.9,
+     "font": "Fraunces",
+     "weight": 600,
+     "tracking": -0.045,
+     "leading": 0.8,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.76,
+     "top": 23,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Somark Mídia : agência de marketing digital",
+     "words": 7,
+     "lines": 1,
+     "size": 114.6,
+     "font": "Fraunces"
+    },
+    "headings": [
+     {
+      "text": "Somark Mídia : agência de marketing digital",
+      "words": 7,
+      "chars": 43,
+      "lines": 1,
+      "size": 114.6,
+      "vw": 14.9,
+      "font": "Fraunces",
+      "weight": 600,
+      "tracking": -0.045,
+      "leading": 0.8,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.76,
+      "top": 23,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Quatro frentes que somam.",
+      "words": 4,
+      "chars": 25,
+      "lines": 2,
+      "size": 37.2,
+      "vw": 4.8,
+      "font": "Fraunces",
+      "weight": 600,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.93,
+      "top": 1691,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Portfólio",
+      "words": 1,
+      "chars": 9,
+      "lines": 1,
+      "size": 37.2,
+      "vw": 4.8,
+      "font": "Fraunces",
+      "weight": 600,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.19,
+      "top": 2620,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Como trabalhamos",
+      "words": 2,
+      "chars": 16,
+      "lines": 1,
+      "size": 37.2,
+      "vw": 4.8,
+      "font": "Fraunces",
+      "weight": 600,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.93,
+      "top": 5529,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Marcas que confiam no nosso trabalho",
+      "words": 6,
+      "chars": 36,
+      "lines": 1,
+      "size": 37.2,
+      "vw": 4.8,
+      "font": "Fraunces",
+      "weight": 600,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.82,
+      "top": 6163,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Escolha o seu plano",
+      "words": 4,
+      "chars": 19,
+      "lines": 1,
+      "size": 37.2,
+      "vw": 4.8,
+      "font": "Fraunces",
+      "weight": 600,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.93,
+      "top": 6494,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "LITE",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 37.2,
+      "vw": 4.8,
+      "font": "Fraunces",
+      "weight": 600,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.88,
+      "top": 6682,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "PRO",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 37.2,
+      "vw": 4.8,
+      "font": "Fraunces",
+      "weight": 600,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.88,
+      "top": 7013,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "PRIME",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 37.2,
+      "vw": 4.8,
+      "font": "Fraunces",
+      "weight": 600,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.88,
+      "top": 7344,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Quem está por trás",
+      "words": 4,
+      "chars": 18,
+      "lines": 1,
+      "size": 37.2,
+      "vw": 4.8,
+      "font": "Fraunces",
+      "weight": 600,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.93,
+      "top": 7717,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Vamos crescer juntos?",
+      "words": 3,
+      "chars": 21,
+      "lines": 1,
+      "size": 37.2,
+      "vw": 4.8,
+      "font": "Fraunces",
+      "weight": 600,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.93,
+      "top": 8899,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "S o m a r k",
+      "words": 6,
+      "chars": 11,
+      "lines": 1,
+      "size": 120.5,
+      "vw": 15.7,
+      "font": "Fraunces",
+      "weight": 600,
+      "tracking": 0,
+      "leading": 0.78,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.93,
+      "top": 9604,
+      "tag": "div",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 12,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Montserrat",
+       "share": 0.87,
+       "mono": false
+      },
+      {
+       "family": "Fraunces",
+       "share": 0.13,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      14,
+      17,
+      20,
+      37,
+      115,
+      121
+     ],
+     "sizeCount": 6,
+     "notLoaded": [],
+     "body": {
+      "font": "Montserrat",
+      "size": 17,
+      "leading": 1.5,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 13.9
+     },
+     "measureChars": 88,
+     "max": {
+      "size": 120.5,
+      "vw": 15.7,
+      "font": "Fraunces",
+      "text": "S"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.01,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#e4eae3",
+     "bodyBgHsl": {
+      "h": 111,
+      "s": 0.14,
+      "l": 0.9
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#3e533d",
+       "top": 271,
+       "hsl": {
+        "h": 117,
+        "s": 0.15,
+        "l": 0.28
+       }
+      },
+      {
+       "color": "#19221b",
+       "top": 2564,
+       "hsl": {
+        "h": 133,
+        "s": 0.15,
+        "l": 0.12
+       }
+      },
+      {
+       "color": "#273528",
+       "top": 3190,
+       "hsl": {
+        "h": 124,
+        "s": 0.15,
+        "l": 0.18
+       }
+      },
+      {
+       "color": "#f6f9f5",
+       "top": 5473,
+       "hsl": {
+        "h": 105,
+        "s": 0.25,
+        "l": 0.97
+       }
+      },
+      {
+       "color": "#dce6d9",
+       "top": 7288,
+       "hsl": {
+        "h": 106,
+        "s": 0.21,
+        "l": 0.88
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#0f1a12",
+       "share": 0.42
+      },
+      {
+       "color": "#f2f7f3",
+       "share": 0.24
+      },
+      {
+       "color": "#3c4a3f",
+       "share": 0.17
+      },
+      {
+       "color": "#d3dfd0",
+       "share": 0.16
+      },
+      {
+       "color": "#f6f9f5",
+       "share": 0
+      }
+     ],
+     "button": {
+      "bg": "#0f1a12",
+      "hsl": {
+       "h": 136,
+       "s": 0.27,
+       "l": 0.08
+      },
+      "fg": "#f2f7f3"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 10,
+     "inHero": 5,
+     "radius": 6,
+     "height": 58,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Pular para o conteúdo",
+      "Serviços",
+      "Portfólio",
+      "Planos",
+      "Contato"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 37,
+     "boxRadius": 6,
+     "squareMedia": 0,
+     "roundedMedia": 12,
+     "mediaRadius": 6,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 946
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.53
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": false,
+     "height": 0,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "fraunces",
+     "montserrat",
+     "phosphor",
+     "phosphor-fill"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 768,
+     "h": 1024
+    },
+    "pageH": 9906,
+    "margins": {
+     "left": 12,
+     "right": 28
+    },
+    "sections": [
+     {
+      "sel": "section.hero",
+      "tag": "section",
+      "top": 12,
+      "height": 1615,
+      "words": 49,
+      "media": 2,
+      "middle": 0,
+      "heading": null,
+      "left": 12,
+      "right": 12,
+      "textLeft": 28,
+      "textRight": 194,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#servicos.fronts",
+      "tag": "section",
+      "top": 1635,
+      "height": 921,
+      "words": 98,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Quatro frentes",
+       "size": 37,
+       "tag": "h2"
+      },
+      "left": 28,
+      "right": 28,
+      "textLeft": 28,
+      "textRight": 28,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#portfolio.work.tile",
+      "tag": "section",
+      "top": 2564,
+      "height": 2901,
+      "words": 53,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Portfólio",
+       "size": 37,
+       "tag": "h2"
+      },
+      "left": 28,
+      "right": 28,
+      "textLeft": 28,
+      "textRight": 28,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#metodo.method.tile",
+      "tag": "section",
+      "top": 5473,
+      "height": 627,
+      "words": 39,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Como trabalhamos",
+       "size": 37,
+       "tag": "h2"
+      },
+      "left": 28,
+      "right": 28,
+      "textLeft": 28,
+      "textRight": 35,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.proof",
+      "tag": "section",
+      "top": 6107,
+      "height": 323,
+      "words": 6,
+      "media": 0,
+      "middle": 1322,
+      "heading": {
+       "text": "Marcas que confiam no nosso trabalho",
+       "size": 37,
+       "tag": "h2"
+      },
+      "left": 0,
+      "right": 0,
+      "textLeft": 28,
+      "textRight": 112,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#planos.plans.tile",
+      "tag": "section",
+      "top": 6438,
+      "height": 1215,
+      "words": 100,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Escolha o seu plano",
+       "size": 37,
+       "tag": "h2"
+      },
+      "left": 28,
+      "right": 69,
+      "textLeft": 28,
+      "textRight": 69,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.about",
+      "tag": "section",
+      "top": 7661,
+      "height": 1080,
+      "words": 77,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Quem está por trás",
+       "size": 37,
+       "tag": "h2"
+      },
+      "left": 12,
+      "right": 12,
+      "textLeft": 28,
+      "textRight": 67,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#contato.contact.tile",
+      "tag": "section",
+      "top": 8749,
+      "height": 491,
+      "words": 29,
+      "media": 0,
+      "middle": 233,
+      "heading": {
+       "text": "Vamos crescer juntos?",
+       "size": 37,
+       "tag": "h2"
+      },
+      "left": 12,
+      "right": 0,
+      "textLeft": 28,
+      "textRight": 142,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer.foot.tile",
+      "tag": "footer",
+      "top": 9249,
+      "height": 645,
+      "words": 40,
+      "media": 0,
+      "middle": 145,
+      "heading": null,
+      "left": 28,
+      "right": 42,
+      "textLeft": 28,
+      "textRight": 42,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Somark Mídia : agência de marketing digital",
+      "size": 115,
+      "top": 23,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 28,
+      "n": 19
+     },
+     {
+      "x": 46,
+      "n": 5
+     },
+     {
+      "x": 92,
+      "n": 1
+     },
+     {
+      "x": 330,
+      "n": 1
+     },
+     {
+      "x": 542,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 27,
+    "bodySize": 17,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  },
+  {
+   "width": 390,
+   "height": 844,
+   "load": "load",
+   "screens": 11,
+   "filled": [
+    0.92,
+    0.89,
+    0.86,
+    0.92,
+    0.92,
+    0.85,
+    0.92,
+    0.92,
+    0.92,
+    0.92,
+    0.92
+   ],
+   "motion": {
+    "elements": 33,
+    "css": 17,
+    "transitions": 16,
+    "scripted": 0,
+    "videos": 9,
+    "playingVideos": 0
+   },
+   "metrics": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "page": {
+     "height": 8473,
+     "screens": 10,
+     "words": 496,
+     "img": 49,
+     "video": 9,
+     "canvas": 0,
+     "svg": 0,
+     "sections": 8,
+     "horizontalOverflow": 0,
+     "overflowCulprits": [],
+     "uiFragments": 0,
+     "uiAbuse": false,
+     "realPictures": 12,
+     "videoCount": 9,
+     "uiPictures": 0,
+     "pictureSamples": [
+      "760?grayscale",
+      "900?grayscale",
+      "875?grayscale"
+     ],
+     "blendText": 0,
+     "sideScrollers": 1,
+     "brokenImages": [],
+     "emoji": [],
+     "videosNoPoster": 9
+    },
+    "hero": {
+     "text": "Somark Mídia : agência de marketing digital",
+     "words": 7,
+     "chars": 43,
+     "lines": 1,
+     "size": 56.4,
+     "vw": 14.5,
+     "font": "Fraunces",
+     "weight": 600,
+     "tracking": -0.045,
+     "leading": 0.8,
+     "upper": false,
+     "italic": false,
+     "mono": false,
+     "align": "left",
+     "position": "center",
+     "widthRatio": 0.85,
+     "top": 32,
+     "tag": "h1",
+     "kind": "heading"
+    },
+    "h1": {
+     "text": "Somark Mídia : agência de marketing digital",
+     "words": 7,
+     "lines": 1,
+     "size": 56.4,
+     "font": "Fraunces"
+    },
+    "headings": [
+     {
+      "text": "Somark Mídia : agência de marketing digital",
+      "words": 7,
+      "chars": 43,
+      "lines": 1,
+      "size": 56.4,
+      "vw": 14.5,
+      "font": "Fraunces",
+      "weight": 600,
+      "tracking": -0.045,
+      "leading": 0.8,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.85,
+      "top": 32,
+      "tag": "h1",
+      "kind": "heading"
+     },
+     {
+      "text": "Quatro frentes que somam.",
+      "words": 4,
+      "chars": 25,
+      "lines": 2,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Fraunces",
+      "weight": 600,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.86,
+      "top": 1230,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Portfólio",
+      "words": 1,
+      "chars": 9,
+      "lines": 1,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Fraunces",
+      "weight": 600,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "left",
+      "widthRatio": 0.33,
+      "top": 2384,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Como trabalhamos",
+      "words": 2,
+      "chars": 16,
+      "lines": 1,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Fraunces",
+      "weight": 600,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.86,
+      "top": 3962,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Marcas que confiam no nosso trabalho",
+      "words": 6,
+      "chars": 36,
+      "lines": 2,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Fraunces",
+      "weight": 600,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.86,
+      "top": 4617,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Escolha o seu plano",
+      "words": 4,
+      "chars": 19,
+      "lines": 1,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Fraunces",
+      "weight": 600,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.86,
+      "top": 4975,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "LITE",
+      "words": 1,
+      "chars": 4,
+      "lines": 1,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Fraunces",
+      "weight": 600,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.76,
+      "top": 5183,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "PRO",
+      "words": 1,
+      "chars": 3,
+      "lines": 1,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Fraunces",
+      "weight": 600,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.76,
+      "top": 5560,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "PRIME",
+      "words": 1,
+      "chars": 5,
+      "lines": 1,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Fraunces",
+      "weight": 600,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": true,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.76,
+      "top": 5937,
+      "tag": "h3",
+      "kind": "heading"
+     },
+     {
+      "text": "Quem está por trás",
+      "words": 4,
+      "chars": 18,
+      "lines": 1,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Fraunces",
+      "weight": 600,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.86,
+      "top": 6356,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "Vamos crescer juntos?",
+      "words": 3,
+      "chars": 21,
+      "lines": 1,
+      "size": 32,
+      "vw": 8.2,
+      "font": "Fraunces",
+      "weight": 600,
+      "tracking": -0.035,
+      "leading": 1,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.86,
+      "top": 7425,
+      "tag": "h2",
+      "kind": "heading"
+     },
+     {
+      "text": "S o m a r k",
+      "words": 6,
+      "chars": 11,
+      "lines": 1,
+      "size": 59.3,
+      "vw": 15.2,
+      "font": "Fraunces",
+      "weight": 600,
+      "tracking": 0,
+      "leading": 0.78,
+      "upper": false,
+      "italic": false,
+      "mono": false,
+      "align": "left",
+      "position": "center",
+      "widthRatio": 0.86,
+      "top": 8167,
+      "tag": "div",
+      "kind": "heading"
+     }
+    ],
+    "headingSummary": {
+     "count": 12,
+     "maxLines": 2,
+     "over2Lines": 0,
+     "statements": 0,
+     "centered": 0,
+     "medianWords": 3,
+     "mixedFontHeadings": 0
+    },
+    "type": {
+     "families": [
+      {
+       "family": "Montserrat",
+       "share": 0.87,
+       "mono": false
+      },
+      {
+       "family": "Fraunces",
+       "share": 0.13,
+       "mono": false
+      }
+     ],
+     "familyCount": 2,
+     "sizes": [
+      14,
+      17,
+      20,
+      32,
+      56,
+      59
+     ],
+     "sizeCount": 6,
+     "notLoaded": [],
+     "body": {
+      "font": "Montserrat",
+      "size": 17,
+      "leading": 1.5,
+      "weight": 400,
+      "tracking": 0,
+      "contrast": 13.9
+     },
+     "measureChars": 43,
+     "max": {
+      "size": 59.3,
+      "vw": 15.2,
+      "font": "Fraunces",
+      "text": "S"
+     },
+     "monoShare": 0,
+     "monoProseShare": 0,
+     "monoFamilies": [],
+     "monoSamples": [],
+     "microLabels": 0,
+     "microLabelShare": 0,
+     "microSamples": [],
+     "upperShare": 0,
+     "centerShare": 0.01,
+     "smallText": 0
+    },
+    "eyebrows": [],
+    "numbered": [],
+    "color": {
+     "bodyBg": "#e4eae3",
+     "bodyBgHsl": {
+      "h": 111,
+      "s": 0.14,
+      "l": 0.9
+     },
+     "dark": false,
+     "sectionBgs": [
+      {
+       "color": "#3e533d",
+       "top": 239,
+       "hsl": {
+        "h": 117,
+        "s": 0.15,
+        "l": 0.28
+       }
+      },
+      {
+       "color": "#dce6d9",
+       "top": 1174,
+       "hsl": {
+        "h": 106,
+        "s": 0.21,
+        "l": 0.88
+       }
+      },
+      {
+       "color": "#19221b",
+       "top": 2328,
+       "hsl": {
+        "h": 133,
+        "s": 0.15,
+        "l": 0.12
+       }
+      },
+      {
+       "color": "#f6f9f5",
+       "top": 3906,
+       "hsl": {
+        "h": 105,
+        "s": 0.25,
+        "l": 0.97
+       }
+      },
+      {
+       "color": "#00fe8d",
+       "top": 5504,
+       "hsl": {
+        "h": 153,
+        "s": 1,
+        "l": 0.5
+       }
+      }
+     ],
+     "textColors": [
+      {
+       "color": "#0f1a12",
+       "share": 0.42
+      },
+      {
+       "color": "#f2f7f3",
+       "share": 0.24
+      },
+      {
+       "color": "#3c4a3f",
+       "share": 0.17
+      },
+      {
+       "color": "#d3dfd0",
+       "share": 0.16
+      },
+      {
+       "color": "#f6f9f5",
+       "share": 0
+      }
+     ],
+     "button": {
+      "bg": "#0f1a12",
+      "hsl": {
+       "h": 136,
+       "s": 0.27,
+       "l": 0.08
+      },
+      "fg": "#0f1a12"
+     },
+     "lowContrast": []
+    },
+    "buttons": {
+     "count": 11,
+     "inHero": 6,
+     "radius": 6,
+     "height": 58,
+     "withShadow": 0,
+     "withGradient": 0,
+     "mono": 0,
+     "upper": 0,
+     "heroLabels": [
+      "Pular para o conteúdo",
+      "Serviços",
+      "Portfólio",
+      "Planos",
+      "Contato"
+     ]
+    },
+    "surfaces": {
+     "shadowStatic": 0,
+     "shadowOverlay": 0,
+     "shadowSamples": [],
+     "gradients": 0,
+     "scrims": 0,
+     "gradientSamples": [],
+     "gradientText": 0,
+     "hairlines": 0,
+     "hairlineSamples": [],
+     "outlinedBoxes": 0,
+     "dashed": 0,
+     "blurred": 0,
+     "roundedBoxes": 36,
+     "boxRadius": 6,
+     "squareMedia": 0,
+     "roundedMedia": 5,
+     "mediaRadius": 6,
+     "textShadow": 0,
+     "cardRows": [
+      {
+       "count": 4,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 630
+      },
+      {
+       "count": 3,
+       "iconTopped": false,
+       "rounded": true,
+       "top": 5127
+      }
+     ]
+    },
+    "heroMedia": [
+     {
+      "type": "img",
+      "ratio": 0.31
+     }
+    ],
+    "nav": {
+     "links": 1,
+     "fixed": false,
+     "height": 0,
+     "floatingPill": false,
+     "blur": false
+    },
+    "fontsLoaded": [
+     "fraunces",
+     "montserrat",
+     "phosphor",
+     "phosphor-fill"
+    ]
+   },
+   "layout": {
+    "viewport": {
+     "w": 390,
+     "h": 844
+    },
+    "pageH": 8473,
+    "margins": {
+     "left": 12,
+     "right": 28
+    },
+    "sections": [
+     {
+      "sel": "section.hero",
+      "tag": "section",
+      "top": 12,
+      "height": 1154,
+      "words": 51,
+      "media": 2,
+      "middle": 0,
+      "heading": {
+       "text": "Somark Mídia",
+       "size": 56,
+       "tag": "h1"
+      },
+      "left": 12,
+      "right": 12,
+      "textLeft": 28,
+      "textRight": 28,
+      "fullBleed": false,
+      "footer": false,
+      "hero": true,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#servicos.fronts",
+      "tag": "section",
+      "top": 1174,
+      "height": 1146,
+      "words": 98,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Quatro frentes",
+       "size": 32,
+       "tag": "h2"
+      },
+      "left": 28,
+      "right": 28,
+      "textLeft": 28,
+      "textRight": 28,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#portfolio.work.tile",
+      "tag": "section",
+      "top": 2328,
+      "height": 1570,
+      "words": 53,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Portfólio",
+       "size": 32,
+       "tag": "h2"
+      },
+      "left": 28,
+      "right": 28,
+      "textLeft": 28,
+      "textRight": 28,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#metodo.method.tile",
+      "tag": "section",
+      "top": 3906,
+      "height": 647,
+      "words": 39,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "Como trabalhamos",
+       "size": 32,
+       "tag": "h2"
+      },
+      "left": 28,
+      "right": 28,
+      "textLeft": 28,
+      "textRight": 48,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section.proof",
+      "tag": "section",
+      "top": 4561,
+      "height": 349,
+      "words": 6,
+      "media": 0,
+      "middle": 1680,
+      "heading": {
+       "text": "Marcas que confiam no nosso trabalho",
+       "size": 32,
+       "tag": "h2"
+      },
+      "left": 0,
+      "right": 0,
+      "textLeft": 28,
+      "textRight": 34,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "div.plans__head",
+      "tag": "div",
+      "top": 4975,
+      "height": 125,
+      "words": 17,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 28,
+      "right": 31,
+      "textLeft": 28,
+      "textRight": 31,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "div.pcards",
+      "tag": "div",
+      "top": 5127,
+      "height": 1149,
+      "words": 79,
+      "media": 0,
+      "middle": 0,
+      "heading": {
+       "text": "LITE",
+       "size": 32,
+       "tag": "h3"
+      },
+      "left": 46,
+      "right": 51,
+      "textLeft": 46,
+      "textRight": 51,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": true,
+      "pinned": false
+     },
+     {
+      "sel": "section.about",
+      "tag": "section",
+      "top": 6300,
+      "height": 968,
+      "words": 77,
+      "media": 1,
+      "middle": 0,
+      "heading": {
+       "text": "Quem está por trás",
+       "size": 32,
+       "tag": "h2"
+      },
+      "left": 12,
+      "right": 12,
+      "textLeft": 28,
+      "textRight": 37,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "section#contato.contact.tile",
+      "tag": "section",
+      "top": 7275,
+      "height": 528,
+      "words": 29,
+      "media": 0,
+      "middle": 611,
+      "heading": {
+       "text": "Vamos crescer juntos?",
+       "size": 32,
+       "tag": "h2"
+      },
+      "left": 12,
+      "right": 0,
+      "textLeft": 28,
+      "textRight": 45,
+      "fullBleed": false,
+      "footer": false,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     },
+     {
+      "sel": "footer.foot.tile",
+      "tag": "footer",
+      "top": 7811,
+      "height": 650,
+      "words": 40,
+      "media": 0,
+      "middle": 0,
+      "heading": null,
+      "left": 28,
+      "right": 32,
+      "textLeft": 28,
+      "textRight": 32,
+      "fullBleed": false,
+      "footer": true,
+      "hero": false,
+      "continues": false,
+      "pinned": false
+     }
+    ],
+    "gaps": [],
+    "h1s": [
+     {
+      "text": "Somark Mídia : agência de marketing digital",
+      "size": 56,
+      "top": 32,
+      "firstScreen": true
+     }
+    ],
+    "edgeText": [],
+    "edges": [
+     {
+      "x": 28,
+      "n": 21
+     },
+     {
+      "x": 46,
+      "n": 4
+     },
+     {
+      "x": 179,
+      "n": 1
+     },
+     {
+      "x": 190,
+      "n": 1
+     }
+    ],
+    "leftBlocks": 27,
+    "bodySize": 17,
+    "stage": false,
+    "explains": true,
+    "slivers": [],
+    "voidShare": 0,
+    "voidBox": null
+   },
+   "app": null,
+   "consoleErrors": []
+  }
+ ],
+ "findings": [
+  {
+   "level": "WARN",
+   "id": "card-rows",
+   "width": 1440,
+   "message": "3 rows of identical boxed cards.",
+   "fix": "Vary the composition; not every section is a card grid.",
+   "alsoAt": [
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "no-poster",
+   "width": 1440,
+   "message": "7 clip(s) without a poster.",
+   "fix": "Give every clip a poster frame: in the study of 100 Sites of the Day only 31% had one, and the blank or grey boxes before the clips played were recorded as faults (references/imagery.md §11).",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "side-scroll",
+   "width": 1440,
+   "message": "1 row(s) scroll sideways with content past their edge.",
+   "fix": "Jurors and most visitors read a row cut at the edge as clipped, not as scrollable. Wrap it onto more lines, or end it inside the grid.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "off-centre",
+   "width": 1440,
+   "message": "The margins differ: 132px on the left, 156px on the right, at 1440px.",
+   "fix": "Put the navigation and the content on one pair of margins; check for padding on one side only, a scrollbar gutter, or a header on another inset than the page.",
+   "alsoAt": [
+    768,
+    390
+   ]
+  },
+  {
+   "level": "WARN",
+   "id": "blank-gap",
+   "width": 1440,
+   "message": "A 392px stretch at 6168px holds nothing.",
+   "fix": "Check that it is a deliberate rest (once per page at most); otherwise close it to the normal section gap."
+  }
+ ],
+ "images": [
+  {
+   "viewport": "desktop",
+   "width": 1440,
+   "fold": "Z:\\Dev\\landing page falcao\\.taste-skill\\v2\\desktop-fold.jpg",
+   "pages": [
+    "Z:\\Dev\\landing page falcao\\.taste-skill\\v2\\desktop-page-01.jpg",
+    "Z:\\Dev\\landing page falcao\\.taste-skill\\v2\\desktop-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "tablet",
+   "width": 768,
+   "fold": "Z:\\Dev\\landing page falcao\\.taste-skill\\v2\\tablet-fold.jpg",
+   "pages": [
+    "Z:\\Dev\\landing page falcao\\.taste-skill\\v2\\tablet-page-01.jpg",
+    "Z:\\Dev\\landing page falcao\\.taste-skill\\v2\\tablet-page-02.jpg"
+   ],
+   "film": []
+  },
+  {
+   "viewport": "mobile",
+   "width": 390,
+   "fold": "Z:\\Dev\\landing page falcao\\.taste-skill\\v2\\mobile-fold.jpg",
+   "pages": [
+    "Z:\\Dev\\landing page falcao\\.taste-skill\\v2\\mobile-page-01.jpg",
+    "Z:\\Dev\\landing page falcao\\.taste-skill\\v2\\mobile-page-02.jpg"
+   ],
+   "film": []
+  }
+ ]
+}

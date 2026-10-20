@@ -1,4 +1,4 @@
-/* Somark Mídia: protótipo 2
+/* Somark Mídia: protótipo 3
    Tudo aqui é melhoria: sem JavaScript a página continua inteira e legível. */
 (() => {
   'use strict';
@@ -43,21 +43,25 @@
   }
 
   /* ---------- Portfólio: vídeo toca no hover (mouse) ou no toque (celular) ----------
-     Para publicar um vídeo, basta preencher data-src (e data-poster) no <figure>. */
+     O <video> tem preload="none": nada é baixado até a primeira interação. Até o
+     primeiro quadro chegar fica à vista o poster (um <img> lazy); .is-live troca os dois.
+     Um vídeo por vez: começar um pausa o anterior. */
   const clips = $$('[data-clip]');
-  clips.forEach((clip) => {
+  const players = clips.map((clip) => {
     const video = $('video', clip);
     const hit = $('.clip__hit', clip);
-    const src = (clip.dataset.src || '').trim();
-    const poster = (clip.dataset.poster || '').trim();
-    if (!src) { hit.setAttribute('aria-disabled', 'true'); return; }
-
-    clip.classList.add('has-video');
-    if (poster) video.poster = poster;
-    hit.setAttribute('aria-label', hit.getAttribute('aria-label').replace(', em breve', ''));
-    const ensure = () => { if (!video.getAttribute('src')) { video.src = src; video.preload = 'auto'; } };
-    const play = () => { ensure(); video.muted = true; const p = video.play(); if (p) p.catch(() => {}); clip.classList.add('is-playing'); };
-    const stop = (reset) => { video.pause(); if (reset) video.currentTime = 0; clip.classList.remove('is-playing'); };
+    const stop = (reset) => {
+      video.pause();
+      hit.setAttribute('aria-pressed', 'false');
+      if (reset) { video.currentTime = 0; clip.classList.remove('is-live'); }
+    };
+    const play = () => {
+      players.forEach((p) => { if (p.video !== video && !p.video.paused) p.stop(canHover); });
+      video.muted = true;
+      const p = video.play(); if (p) p.catch(() => {});
+      hit.setAttribute('aria-pressed', 'true');
+    };
+    video.addEventListener('playing', () => clip.classList.add('is-live'));
 
     if (canHover) {
       clip.addEventListener('mouseenter', play);
@@ -66,11 +70,12 @@
       hit.addEventListener('blur', () => stop(true));
     }
     hit.addEventListener('click', () => (video.paused ? play() : stop(false)));
+    return { clip, video, stop };
   });
   // pausa o que sair da tela
   if ('IntersectionObserver' in window) {
     const vio = new IntersectionObserver((entries) => {
-      for (const e of entries) if (!e.isIntersecting) { const v = $('video', e.target); if (v && !v.paused) v.pause(); }
+      for (const e of entries) if (!e.isIntersecting) players.find((p) => p.clip === e.target)?.stop(false);
     }, { threshold: 0.1 });
     clips.forEach((c) => vio.observe(c));
   }
@@ -90,16 +95,16 @@
     }
   });
 
-  /* ---------- Esteiras: um botão para as duas (WCAG 2.2.2). O CSS só o mostra com movimento permitido. ---------- */
+  /* ---------- Esteiras: um botão para as duas (WCAG 2.2.2). O CSS só o mostra com movimento permitido.
+     O botão é só o ícone: o nome acessível fica no aria-label e a dica no title. ---------- */
   const proof = $('.proof');
   const beltToggle = $('[data-belt-toggle]');
   if (proof && beltToggle && !reduce) {
     const icon = $('i', beltToggle);
-    const label = $('span', beltToggle);
     beltToggle.addEventListener('click', () => {
       const paused = proof.classList.toggle('is-paused');
       icon.className = paused ? 'ph ph-play' : 'ph ph-pause';
-      label.textContent = paused ? 'Retomar' : 'Pausar';
+      beltToggle.title = paused ? 'Retomar' : 'Pausar';
       beltToggle.setAttribute('aria-label', paused ? 'Retomar o movimento das marcas' : 'Pausar o movimento das marcas');
     });
   }

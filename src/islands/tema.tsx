@@ -1,5 +1,6 @@
-/* Ilha React do botão de tema (prototipos/v2).
-   O ThemeToggleButton4 (Skiper 4) entra como um quinto bloco da nav .jumps e o
+/* Ilha React do botão de tema (prototipos/v2 e v3).
+   O ThemeToggleButton4 (Skiper 4) entra no lugar marcado com [data-theme-slot]
+   (o header da v3) ou, sem ele, como um quinto bloco da nav .jumps (v2). O
    useThemeToggle (Skiper 26) troca o tema com uma View Transition em círculo.
    O next-themes põe a classe .dark no <html>; as cores escuras ficam em
    prototipos/v2/css/styles.css. Sem JavaScript não há botão e a página fica clara. */
@@ -45,13 +46,16 @@ const syncThemeColor = () => {
 new MutationObserver(syncThemeColor).observe(document.documentElement, { attributeFilter: ["class"] });
 syncThemeColor();
 
+const slot = document.querySelector<HTMLElement>("[data-theme-slot]");
 const nav = document.querySelector<HTMLElement>(".hero .jumps");
-
-if (nav) {
-  const mount = document.createElement("div");
+let mount = slot;
+if (!mount && nav) {
+  mount = document.createElement("div");
   mount.className = "jump-theme tile";
   nav.append(mount);
+}
 
+if (mount) {
   createRoot(mount).render(
     <StrictMode>
       {/* scriptProps: o next-themes renderiza um <script> anti-flash que só serve com SSR.

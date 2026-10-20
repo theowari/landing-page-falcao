@@ -1,8 +1,9 @@
-/* Ilha React dos links de texto (prototipos/v2).
+/* Ilha React dos links de texto (prototipos/v2 e v3).
    Os <a class="link"> continuam no HTML: são o fallback sem JavaScript e a fonte
    do conteúdo. Aqui eles são lidos e trocados pelo Link004 (Skiper UI), com o
-   efeito de preenchimento. A abertura (.hero) fica de fora; botões e blocos não
-   são .link e não mudam. As cores por bloco e tema estão em island.css. */
+   efeito de preenchimento. Vale para a página toda, inclusive o <header> da v3;
+   botões e blocos não são .link e não mudam. As cores por bloco e tema estão em
+   island.css (e, na v3, no styles.css dela). */
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
@@ -11,9 +12,7 @@ import "@/styles/island.css";
 
 const isIcon = (node: Node): node is HTMLElement => node instanceof HTMLElement && node.tagName === "I";
 
-for (const a of document.querySelectorAll<HTMLAnchorElement>("main a.link")) {
-  if (a.closest(".hero")) continue;
-
+for (const a of document.querySelectorAll<HTMLAnchorElement>("a.link")) {
   // href, rel, data-wa...; a classe fica (peso e tamanho por seção) e ganha .link--fill, sem sublinhado.
   const attrs = Object.fromEntries(
     [...a.attributes].filter((attr) => attr.name !== "class").map((attr) => [attr.name, attr.value]),

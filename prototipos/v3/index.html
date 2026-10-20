@@ -28,333 +28,420 @@
   </script>
 </head>
 <body>
-<nav aria-label="Atalho"><a class="skip" href="#servicos">Pular para o conteúdo</a></nav>
+<nav aria-label="Atalho"><a class="skip" href="#conteudo">Pular para o conteúdo</a></nav>
 
-<main class="board" id="topo">
+<div class="board" id="topo">
 
-  <!-- ============ 1. Abertura: nome, atalhos e trilhos ============ -->
-  <section class="hero" aria-labelledby="hero-title">
-    <div class="band tile tile--field">
-      <h1 class="band__name" id="hero-title"><img class="band__logo" src="../../assets/brand/somark-logo-branco.png" alt="Somark Mídia" width="903" height="367"><span class="vh">: agência de marketing digital</span></h1>
-    </div>
-
-    <!-- Com JavaScript, src/islands/tema.tsx acrescenta aqui o bloco do tema claro/escuro. -->
-    <nav class="jumps" aria-label="Seções">
-      <a class="jump tile" href="#servicos">Serviços <i class="ph ph-arrow-down-right" aria-hidden="true"></i></a>
-      <a class="jump tile" href="#portfolio">Portfólio <i class="ph ph-arrow-down-right" aria-hidden="true"></i></a>
-      <a class="jump tile" href="#planos">Planos <i class="ph ph-arrow-down-right" aria-hidden="true"></i></a>
-      <a class="jump tile" href="#contato">Contato <i class="ph ph-arrow-down-right" aria-hidden="true"></i></a>
+  <!-- ============ Cabeçalho: logo, seções e tema numa barra só ============ -->
+  <header class="head panel panel--field">
+    <a class="head__brand" href="#topo"><img class="head__logo" src="../../assets/brand/somark-logo-branco.svg" alt="Somark Mídia" width="903" height="367"></a>
+    <nav class="head__nav" aria-label="Seções">
+      <ul class="head__list">
+        <li><a class="link" href="#servicos">Serviços</a></li>
+        <li><a class="link" href="#portfolio">Portfólio</a></li>
+        <li><a class="link" href="#planos">Planos</a></li>
+        <li><a class="link" href="#contato">Contato</a></li>
+      </ul>
     </nav>
+    <!-- Com JavaScript, src/islands/tema.tsx monta aqui o botão do tema claro/escuro. -->
+    <div class="head__theme" data-theme-slot></div>
+  </header>
 
-    <div class="rail-left">
-      <figure class="photo tile" data-reveal>
-        <img src="https://picsum.photos/id/508/600/760?grayscale" alt="" width="600" height="760">
-      </figure>
-      <div class="facts tile">
-        <h2 class="facts__title">O que fazemos</h2>
-        <ul class="facts__list">
-          <li><i class="ph ph-megaphone" aria-hidden="true"></i> Gestão de redes</li>
-          <li><i class="ph ph-chart-line-up" aria-hidden="true"></i> Estratégia</li>
-          <li><i class="ph ph-pen-nib" aria-hidden="true"></i> Criação de conteúdo</li>
-          <li><i class="ph ph-video-camera" aria-hidden="true"></i> Filmagens e fotos</li>
+  <main id="conteudo">
+
+    <!-- ============ 1. Abertura: um bloco, três colunas separadas por fios ============ -->
+    <section class="hero panel" aria-labelledby="hero-title">
+      <div class="hero__main">
+        <figure class="photo photo--real" data-reveal>
+          <img src="../../assets/img/somark-edicao.webp" alt="Integrante da equipe da Somark diante do computador, de fones de ouvido" width="1600" height="900">
+        </figure>
+        <h1 class="statement" id="hero-title">Marketing digital é mais do que números. <span>Somos uma agência criativa e orientada por dados.</span></h1>
+      </div>
+
+      <div class="hero__aside">
+        <ul class="stats">
+          <li><strong class="fig" data-count="95">+95%</strong><span>satisfação dos clientes</span></li>
+          <li><strong class="fig" data-count="35">+35%</strong><span>engajamento nas redes</span></li>
+          <li><strong class="fig" data-count="65">+65%</strong><span>crescimento em vendas</span></li>
         </ul>
+        <div class="hero__cta">
+          <a class="btn btn--wa" href="https://wa.me/5519998406369?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Somark%20e%20quero%20conversar." data-wa>
+            <i class="ph-fill ph-whatsapp-logo" aria-hidden="true"></i>Falar no WhatsApp
+          </a>
+          <a class="link" href="https://www.instagram.com/creativeserjo" rel="noopener"><i class="ph ph-instagram-logo" aria-hidden="true"></i> @creativeserjo</a>
+        </div>
       </div>
-    </div>
 
-    <div class="center">
-      <figure class="photo photo--big tile" data-reveal>
-        <img src="https://picsum.photos/id/855/1400/900?grayscale" alt="" width="1400" height="900">
+      <div class="hero__side">
+        <figure class="photo" data-reveal>
+          <img src="https://picsum.photos/id/508/600/760?grayscale" alt="" width="600" height="760">
+        </figure>
+        <div class="facts">
+          <h2 class="facts__title">O que fazemos</h2>
+          <ul class="facts__list">
+            <li><i class="ph ph-megaphone" aria-hidden="true"></i> Gestão de redes</li>
+            <li><i class="ph ph-chart-line-up" aria-hidden="true"></i> Estratégia</li>
+            <li><i class="ph ph-pen-nib" aria-hidden="true"></i> Criação de conteúdo</li>
+            <li><i class="ph ph-video-camera" aria-hidden="true"></i> Filmagens e fotos</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 2. Serviços: enunciado à esquerda, quatro linhas à direita ============ -->
+    <section class="fronts panel" id="servicos" aria-labelledby="fronts-title">
+      <div class="fronts__lead">
+        <h2 class="fronts__title" id="fronts-title" data-reveal>
+          <span class="zig">Quatro frentes</span>
+          <span class="zag">que somam.</span>
+        </h2>
+        <div class="fronts__foot" data-reveal>
+          <p>Da estratégia ao vídeo pronto, cuidamos do que a sua marca precisa para crescer nas redes.</p>
+          <a class="link" href="#planos">Ver os planos <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div class="fronts__rows">
+        <article class="row" data-reveal>
+          <h3><i class="ph ph-megaphone" aria-hidden="true"></i> Gestão de redes</h3>
+          <p>Cuidamos das suas redes com conteúdo que conecta e engaja.</p>
+          <p class="terms">Conteúdo mensal, copywriting para anúncios, Google Meu Negócio</p>
+        </article>
+        <article class="row" data-reveal>
+          <h3><i class="ph ph-chart-line-up" aria-hidden="true"></i> Estratégia</h3>
+          <p>Planejamento personalizado com base em dados e objetivos claros.</p>
+          <p class="terms">Dados, objetivos, campanhas</p>
+        </article>
+        <article class="row" data-reveal>
+          <h3><i class="ph ph-pen-nib" aria-hidden="true"></i> Criação de conteúdo</h3>
+          <p>Produzimos conteúdos que comunicam, posicionam e vendem.</p>
+          <p class="terms">Roteiro, posts, conteúdo para redes sociais</p>
+        </article>
+        <article class="row" data-reveal>
+          <h3><i class="ph ph-video-camera" aria-hidden="true"></i> Filmagens e fotos</h3>
+          <p>Vídeos e fotos pensados para performance, não apenas estética.</p>
+          <p class="terms">Vídeo estratégico, color grading, fotografia com assinatura</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ 3. Portfólio: dez vídeos verticais que tocam no hover ============
+         Os MP4 ficam em assets/portfolio/ (cópias dos originais de assets/oficial-media/
+         com o índice no início do arquivo, para começar a tocar mais rápido) e os
+         posters, um quadro de cada vídeo em 540×960, em assets/portfolio/posters/. -->
+    <section class="work panel panel--night" id="portfolio" aria-labelledby="work-title">
+      <div class="work__head">
+        <h2 class="work__title" id="work-title">Portfólio</h2>
+        <a class="link" href="https://www.instagram.com/creativeserjo" rel="noopener">Mais no Instagram <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>
+      </div>
+      <p class="work__hint"><i class="ph ph-cursor-click" aria-hidden="true"></i> Passe o mouse sobre um vídeo para ele tocar. No celular, toque.</p>
+
+      <ul class="reels">
+        <li><figure class="clip" data-clip>
+          <div class="clip__frame">
+            <img class="clip__poster" src="../../assets/portfolio/posters/atencao-clientes-rede-bem.jpg" alt="" width="540" height="960" loading="lazy">
+            <video src="../../assets/portfolio/atencao-clientes-rede-bem.mp4" muted loop playsinline preload="none"></video>
+            <button class="clip__hit" type="button" aria-pressed="false" aria-label="Vídeo: Atenção, clientes"></button>
+            <i class="clip__play ph-fill ph-play" aria-hidden="true"></i>
+          </div>
+          <figcaption><span>Atenção, clientes</span><span>Drogaria</span></figcaption>
+        </figure></li>
+        <li><figure class="clip" data-clip>
+          <div class="clip__frame">
+            <img class="clip__poster" src="../../assets/portfolio/posters/riscou-a-parede.jpg" alt="" width="540" height="960" loading="lazy">
+            <video src="../../assets/portfolio/riscou-a-parede.mp4" muted loop playsinline preload="none"></video>
+            <button class="clip__hit" type="button" aria-pressed="false" aria-label="Vídeo: Riscou a parede"></button>
+            <i class="clip__play ph-fill ph-play" aria-hidden="true"></i>
+          </div>
+          <figcaption><span>Riscou a parede</span><span>Tintas</span></figcaption>
+        </figure></li>
+        <li><figure class="clip" data-clip>
+          <div class="clip__frame">
+            <img class="clip__poster" src="../../assets/portfolio/posters/dra-carla-papada-e-queixo.jpg" alt="" width="540" height="960" loading="lazy">
+            <video src="../../assets/portfolio/dra-carla-papada-e-queixo.mp4" muted loop playsinline preload="none"></video>
+            <button class="clip__hit" type="button" aria-pressed="false" aria-label="Vídeo: Papada e queixo"></button>
+            <i class="clip__play ph-fill ph-play" aria-hidden="true"></i>
+          </div>
+          <figcaption><span>Papada e queixo</span><span>Estética</span></figcaption>
+        </figure></li>
+        <li><figure class="clip" data-clip>
+          <div class="clip__frame">
+            <img class="clip__poster" src="../../assets/portfolio/posters/passei-na-frente.jpg" alt="" width="540" height="960" loading="lazy">
+            <video src="../../assets/portfolio/passei-na-frente.mp4" muted loop playsinline preload="none"></video>
+            <button class="clip__hit" type="button" aria-pressed="false" aria-label="Vídeo: Passei na frente"></button>
+            <i class="clip__play ph-fill ph-play" aria-hidden="true"></i>
+          </div>
+          <figcaption><span>Passei na frente</span><span>Cosméticos</span></figcaption>
+        </figure></li>
+        <li><figure class="clip" data-clip>
+          <div class="clip__frame">
+            <img class="clip__poster" src="../../assets/portfolio/posters/edmais-paraty.jpg" alt="" width="540" height="960" loading="lazy">
+            <video src="../../assets/portfolio/edmais-paraty.mp4" muted loop playsinline preload="none"></video>
+            <button class="clip__hit" type="button" aria-pressed="false" aria-label="Vídeo: Édmais Paraty"></button>
+            <i class="clip__play ph-fill ph-play" aria-hidden="true"></i>
+          </div>
+          <figcaption><span>Édmais Paraty</span><span>Varejo</span></figcaption>
+        </figure></li>
+        <li><figure class="clip" data-clip>
+          <div class="clip__frame">
+            <img class="clip__poster" src="../../assets/portfolio/posters/promocao-vale-comprar-250-reais.jpg" alt="" width="540" height="960" loading="lazy">
+            <video src="../../assets/portfolio/promocao-vale-comprar-250-reais.mp4" muted loop playsinline preload="none"></video>
+            <button class="clip__hit" type="button" aria-pressed="false" aria-label="Vídeo: Vale comprar 250 reais"></button>
+            <i class="clip__play ph-fill ph-play" aria-hidden="true"></i>
+          </div>
+          <figcaption><span>Vale comprar 250 reais</span><span>Moda infantil</span></figcaption>
+        </figure></li>
+        <li><figure class="clip" data-clip>
+          <div class="clip__frame">
+            <img class="clip__poster" src="../../assets/portfolio/posters/autoestima-thuany.jpg" alt="" width="540" height="960" loading="lazy">
+            <video src="../../assets/portfolio/autoestima-thuany.mp4" muted loop playsinline preload="none"></video>
+            <button class="clip__hit" type="button" aria-pressed="false" aria-label="Vídeo: Autoestima"></button>
+            <i class="clip__play ph-fill ph-play" aria-hidden="true"></i>
+          </div>
+          <figcaption><span>Autoestima</span><span>Cosméticos</span></figcaption>
+        </figure></li>
+        <li><figure class="clip" data-clip>
+          <div class="clip__frame">
+            <img class="clip__poster" src="../../assets/portfolio/posters/rolo-errado.jpg" alt="" width="540" height="960" loading="lazy">
+            <video src="../../assets/portfolio/rolo-errado.mp4" muted loop playsinline preload="none"></video>
+            <button class="clip__hit" type="button" aria-pressed="false" aria-label="Vídeo: Rolo errado"></button>
+            <i class="clip__play ph-fill ph-play" aria-hidden="true"></i>
+          </div>
+          <figcaption><span>Rolo errado</span><span>Tintas</span></figcaption>
+        </figure></li>
+        <li><figure class="clip" data-clip>
+          <div class="clip__frame">
+            <img class="clip__poster" src="../../assets/portfolio/posters/caso-zezinha.jpg" alt="" width="540" height="960" loading="lazy">
+            <video src="../../assets/portfolio/caso-zezinha.mp4" muted loop playsinline preload="none"></video>
+            <button class="clip__hit" type="button" aria-pressed="false" aria-label="Vídeo: Caso Zezinha"></button>
+            <i class="clip__play ph-fill ph-play" aria-hidden="true"></i>
+          </div>
+          <figcaption><span>Caso Zezinha</span><span>Estética</span></figcaption>
+        </figure></li>
+        <li><figure class="clip" data-clip>
+          <div class="clip__frame">
+            <img class="clip__poster" src="../../assets/portfolio/posters/5-produtos-baratinhos.jpg" alt="" width="540" height="960" loading="lazy">
+            <video src="../../assets/portfolio/5-produtos-baratinhos.mp4" muted loop playsinline preload="none"></video>
+            <button class="clip__hit" type="button" aria-pressed="false" aria-label="Vídeo: 5 produtos baratinhos"></button>
+            <i class="clip__play ph-fill ph-play" aria-hidden="true"></i>
+          </div>
+          <figcaption><span>5 produtos baratinhos</span><span>Cosméticos</span></figcaption>
+        </figure></li>
+      </ul>
+    </section>
+
+    <!-- ============ 4. Método: sanfona de painéis ============
+         Com JavaScript, src/islands/metodo.tsx troca [data-stages] pelo HoverExpand_001 (Skiper UI),
+         lendo título, texto e ícone daqui. Sem JavaScript, fica esta sanfona. As cores dos
+         painéis (claro; o aberto no verde da marca) ficam em css/styles.css. -->
+    <section class="method panel" id="metodo" aria-labelledby="method-title">
+      <div class="intro">
+        <h2 class="intro__title" id="method-title" data-reveal>Como trabalhamos</h2>
+        <p data-reveal>Um processo criativo estruturado, da ideia à entrega final, com a sua aprovação em cada etapa.</p>
+      </div>
+      <div class="stages" data-stages>
+        <article class="stage is-open">
+          <button class="stage__tab" type="button" aria-expanded="true" aria-controls="st-1"><span>Briefing</span></button>
+          <div class="stage__body" id="st-1"><i class="ph ph-clipboard-text" aria-hidden="true"></i><p>Entendemos a sua marca, o público e o que você quer alcançar antes de criar qualquer coisa.</p></div>
+        </article>
+        <article class="stage">
+          <button class="stage__tab" type="button" aria-expanded="false" aria-controls="st-2"><span>Roteiro</span></button>
+          <div class="stage__body" id="st-2"><i class="ph ph-note-pencil" aria-hidden="true"></i><p>Transformamos a estratégia em ideias e roteiros, na linguagem do marketing.</p></div>
+        </article>
+        <article class="stage">
+          <button class="stage__tab" type="button" aria-expanded="false" aria-controls="st-3"><span>Aprovação</span></button>
+          <div class="stage__body" id="st-3"><i class="ph ph-seal-check" aria-hidden="true"></i><p>Você aprova cada etapa antes da produção. Nada vai ao ar sem o seu ok.</p></div>
+        </article>
+        <article class="stage">
+          <button class="stage__tab" type="button" aria-expanded="false" aria-controls="st-4"><span>Execução</span></button>
+          <div class="stage__body" id="st-4"><i class="ph ph-rocket-launch" aria-hidden="true"></i><p>Gravamos, editamos e publicamos, com color grading profissional e acompanhamento.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ 5. Marcas: duas esteiras de logos no mesmo bloco ============ -->
+    <section class="proof panel" aria-labelledby="proof-title">
+      <div class="proof__head">
+        <h2 id="proof-title">Marcas que confiam no nosso trabalho</h2>
+        <!-- Só aparece com JavaScript e com movimento permitido: para e retoma as duas esteiras. -->
+        <button class="icon-btn proof__pause" type="button" data-belt-toggle aria-label="Pausar o movimento das marcas" title="Pausar"><i class="ph ph-pause" aria-hidden="true"></i></button>
+      </div>
+      <!-- .logo--dark: arte branca, que aqui aparece em preto (o fundo das esteiras é sempre claro). -->
+      <div class="belts">
+        <div class="belt" data-belt>
+          <ul class="belt__track">
+            <li class="logo"><img src="../../assets/logos/logo-02.png" alt="Rede Bem Drogarias" width="439" height="145" loading="lazy"></li>
+            <li class="logo logo--dark"><img src="../../assets/logos/logo-03.png" alt="AGF" width="432" height="150" loading="lazy"></li>
+            <li class="logo"><img src="../../assets/logos/logo-04.png" alt="Cores &amp; Cia" width="288" height="260" loading="lazy"></li>
+            <li class="logo"><img src="../../assets/logos/logo-05.png" alt="AFS Distribuidora" width="216" height="143" loading="lazy"></li>
+            <li class="logo logo--dark"><img src="../../assets/logos/logo-13.png" alt="Piratininga" width="288" height="70" loading="lazy"></li>
+            <li class="logo"><img src="../../assets/logos/logo-06.png" alt="Magu Clean" width="184" height="180" loading="lazy"></li>
+            <li class="logo"><img src="../../assets/logos/logo-07.png" alt="Édmais" width="230" height="72" loading="lazy"></li>
+            <li class="logo logo--dark"><img src="../../assets/logos/logo-14.png" alt="Jaqueline Ramos, clínica estética" width="292" height="291" loading="lazy"></li>
+            <li class="logo"><img src="../../assets/logos/logo-08.png" alt="Unifeob" width="383" height="94" loading="lazy"></li>
+          </ul>
+        </div>
+        <div class="belt belt--reverse" data-belt>
+          <ul class="belt__track">
+            <li class="logo"><img src="../../assets/logos/logo-09.png" alt="Palini Alves" width="308" height="100" loading="lazy"></li>
+            <li class="logo logo--dark"><img src="../../assets/logos/logo-15.png" alt="Joice Silva Farmacêutica" width="220" height="187" loading="lazy"></li>
+            <li class="logo"><img src="../../assets/logos/logo-10.png" alt="Confort Clean" width="198" height="199" loading="lazy"></li>
+            <li class="logo logo--dark"><img src="../../assets/logos/logo-16.png" alt="Survey Brasil" width="249" height="61" loading="lazy"></li>
+            <li class="logo"><img src="../../assets/logos/logo-12.png" alt="Cooper Batata" width="192" height="228" loading="lazy"></li>
+            <li class="logo logo--dark"><img src="../../assets/logos/logo-17.png" alt="Eduzz" width="293" height="83" loading="lazy"></li>
+            <li class="logo logo--dark"><img src="../../assets/logos/logo-11.png" alt="WF" width="203" height="123" loading="lazy"></li>
+            <li class="logo"><img src="../../assets/logos/logo-19.png" alt="Textil São João" width="214" height="69" loading="lazy"></li>
+            <li class="logo logo--dark"><img src="../../assets/logos/logo-18.png" alt="Select" width="177" height="55" loading="lazy"></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 6. Planos: tabela com fios, sem preços ============ -->
+    <section class="plans panel" id="planos" aria-labelledby="plans-title">
+      <div class="intro">
+        <h2 class="intro__title" id="plans-title" data-reveal>Escolha o seu plano</h2>
+        <p data-reveal>Cada plano é o anterior somado a mais frentes. Os valores são combinados na conversa.</p>
+      </div>
+
+      <table class="ptable">
+        <caption class="vh">O que cada plano inclui</caption>
+        <thead>
+          <tr>
+            <th scope="col"><span class="vh">Item</span></th>
+            <th scope="col">LITE</th>
+            <th scope="col" class="rec">PRO</th>
+            <th scope="col">PRIME</th>
+          </tr>
+          <tr class="ptable__for">
+            <td></td>
+            <td>Para quem está começando</td>
+            <td class="rec">O mais escolhido</td>
+            <td>Para resultados acelerados</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Posts por mês</th><td>Até 12</td><td class="rec">Até 16</td><td>Até 20</td></tr>
+          <tr><th scope="row">Gestão de redes sociais</th><td><i class="ph ph-check" aria-hidden="true"></i><span class="vh">Incluída</span></td><td class="rec"><i class="ph ph-check" aria-hidden="true"></i><span class="vh">Incluída</span></td><td><i class="ph ph-check" aria-hidden="true"></i><span class="vh">Incluída</span></td></tr>
+          <tr><th scope="row">Copywriting para anúncios</th><td><i class="ph ph-check" aria-hidden="true"></i><span class="vh">Incluído</span></td><td class="rec"><i class="ph ph-check" aria-hidden="true"></i><span class="vh">Incluído</span></td><td><i class="ph ph-check" aria-hidden="true"></i><span class="vh">Incluído</span></td></tr>
+          <tr><th scope="row">Produção audiovisual</th><td><i class="ph ph-check" aria-hidden="true"></i><span class="vh">Incluída</span></td><td class="rec"><i class="ph ph-check" aria-hidden="true"></i><span class="vh">Incluída</span></td><td><i class="ph ph-check" aria-hidden="true"></i><span class="vh">Incluída</span></td></tr>
+          <tr><th scope="row">Cobertura de eventos</th><td class="no"><i class="ph ph-x" aria-hidden="true"></i><span class="vh">Não incluída</span></td><td class="rec"><i class="ph ph-check" aria-hidden="true"></i><span class="vh">Incluída</span></td><td><i class="ph ph-check" aria-hidden="true"></i><span class="vh">Incluída</span></td></tr>
+          <tr><th scope="row">Acompanhamento da agência</th><td class="no"><i class="ph ph-x" aria-hidden="true"></i><span class="vh">Não incluído</span></td><td class="rec">Semanal</td><td>Diário</td></tr>
+          <tr><th scope="row">Google Meu Negócio</th><td class="no"><i class="ph ph-x" aria-hidden="true"></i><span class="vh">Não incluído</span></td><td class="rec no"><i class="ph ph-x" aria-hidden="true"></i><span class="vh">Não incluído</span></td><td><i class="ph ph-check" aria-hidden="true"></i><span class="vh">Incluído</span></td></tr>
+          <tr><th scope="row">Reuniões quinzenais</th><td class="no"><i class="ph ph-x" aria-hidden="true"></i><span class="vh">Não incluídas</span></td><td class="rec no"><i class="ph ph-x" aria-hidden="true"></i><span class="vh">Não incluídas</span></td><td><i class="ph ph-check" aria-hidden="true"></i><span class="vh">Incluídas</span></td></tr>
+          <tr><th scope="row">Desenvolvimento de sites</th><td class="no"><i class="ph ph-x" aria-hidden="true"></i><span class="vh">Não incluído</span></td><td class="rec no"><i class="ph ph-x" aria-hidden="true"></i><span class="vh">Não incluído</span></td><td><i class="ph ph-check" aria-hidden="true"></i><span class="vh">Incluído</span></td></tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td></td>
+            <td><a class="btn btn--line" href="https://wa.me/5519998406369?text=Ol%C3%A1!%20Tenho%20interesse%20no%20plano%20LITE%20da%20Somark.">Quero o LITE</a></td>
+            <td class="rec"><a class="btn" href="https://wa.me/5519998406369?text=Ol%C3%A1!%20Tenho%20interesse%20no%20plano%20PRO%20da%20Somark.">Quero o PRO</a></td>
+            <td><a class="btn btn--line" href="https://wa.me/5519998406369?text=Ol%C3%A1!%20Tenho%20interesse%20no%20plano%20PRIME%20da%20Somark.">Quero o PRIME</a></td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <!-- no celular, a tabela vira um bloco por plano -->
+      <div class="pcards">
+        <article class="pcard">
+          <h3>LITE</h3>
+          <p class="pcard__for">Para quem está começando</p>
+          <dl>
+            <div><dt>Posts por mês</dt><dd>Até 12</dd></div>
+            <div><dt>Inclui</dt><dd>Gestão de redes sociais, copywriting para anúncios e produção audiovisual</dd></div>
+          </dl>
+          <a class="btn btn--line" href="https://wa.me/5519998406369?text=Ol%C3%A1!%20Tenho%20interesse%20no%20plano%20LITE%20da%20Somark.">Quero o LITE</a>
+        </article>
+        <article class="pcard pcard--rec">
+          <h3>PRO</h3>
+          <p class="pcard__for">O mais escolhido</p>
+          <dl>
+            <div><dt>Posts por mês</dt><dd>Até 16</dd></div>
+            <div><dt>Tudo do LITE, mais</dt><dd>Cobertura de eventos e acompanhamento semanal da agência</dd></div>
+          </dl>
+          <a class="btn" href="https://wa.me/5519998406369?text=Ol%C3%A1!%20Tenho%20interesse%20no%20plano%20PRO%20da%20Somark.">Quero o PRO</a>
+        </article>
+        <article class="pcard">
+          <h3>PRIME</h3>
+          <p class="pcard__for">Para resultados acelerados</p>
+          <dl>
+            <div><dt>Posts por mês</dt><dd>Até 20</dd></div>
+            <div><dt>Tudo do PRO, mais</dt><dd>Acompanhamento diário, Google Meu Negócio, reuniões quinzenais e desenvolvimento de sites</dd></div>
+          </dl>
+          <a class="btn btn--line" href="https://wa.me/5519998406369?text=Ol%C3%A1!%20Tenho%20interesse%20no%20plano%20PRIME%20da%20Somark.">Quero o PRIME</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ 7. Sobre: foto da equipe, citação e fatos ============ -->
+    <section class="about panel" aria-labelledby="about-title">
+      <div class="intro">
+        <h2 class="intro__title" id="about-title" data-reveal>Quem está por trás</h2>
+        <p data-reveal><strong>Sergio Godoy</strong>, fundador da Somark, cria conteúdo audiovisual com estratégia: vídeos e fotos pensados para performance e posicionamento de marca.</p>
+      </div>
+      <figure class="about__photo photo photo--real" data-reveal>
+        <img src="../../assets/img/somark-equipe.webp" alt="Equipe da Somark, com camisetas da marca" width="1600" height="900" loading="lazy">
+        <figcaption class="about__caption">Versátil, aberto a ideias e sempre fora da caixa, Sergio leva a mesma estratégia para a gestão de redes, o roteiro e a produção de cada cliente.</figcaption>
       </figure>
-      <div class="statement tile">
-        <p>Marketing digital é mais do que números. Somos uma agência criativa e orientada por dados.</p>
+      <div class="about__side">
+        <blockquote class="about__quote" data-reveal>
+          <p>“Nunca enxerguei o cotidiano como algo comum.”</p>
+          <cite>Sergio Godoy</cite>
+        </blockquote>
+        <dl class="about__facts" data-reveal>
+          <div><dt>Fundador</dt><dd>Sergio Godoy</dd></div>
+          <div><dt>Frentes</dt><dd>Quatro</dd></div>
+          <div><dt>Planos</dt><dd>LITE, PRO e PRIME</dd></div>
+          <div><dt>Atendimento</dt><dd>WhatsApp e e-mail</dd></div>
+        </dl>
       </div>
-    </div>
+    </section>
 
-    <div class="rail-right">
-      <div class="rtile rtile--1 tile"><strong class="fig" data-count="95">+95%</strong><span>satisfação dos clientes</span></div>
-      <div class="rtile rtile--2 tile"><strong class="fig" data-count="35">+35%</strong><span>engajamento nas redes</span></div>
-      <div class="rtile rtile--3 tile"><strong class="fig" data-count="65">+65%</strong><span>crescimento em vendas</span></div>
-      <a class="rtile rtile--4 tile" href="https://www.instagram.com/creativeserjo" rel="noopener"><i class="ph ph-instagram-logo" aria-hidden="true"></i><span>@creativeserjo</span></a>
-      <a class="rtile rtile--action tile" href="https://wa.me/5519998406369?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Somark%20e%20quero%20conversar." data-wa>
-        <i class="ph-fill ph-whatsapp-logo" aria-hidden="true"></i><span>Falar no WhatsApp</span>
-      </a>
-    </div>
-  </section>
-
-  <!-- ============ 2. Serviços: célula de enunciado + linhas escuras ============ -->
-  <section class="fronts" id="servicos" aria-labelledby="fronts-title">
-    <div class="fronts__lead tile">
-      <h2 class="fronts__title" id="fronts-title" data-reveal>
-        <span class="zig">Quatro frentes</span>
-        <span class="zag">que somam.</span>
-      </h2>
-      <div class="fronts__foot" data-reveal>
-        <p>Da estratégia ao vídeo pronto, cuidamos do que a sua marca precisa para crescer nas redes.</p>
-        <a class="link" href="#planos">Ver os planos <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
-      </div>
-    </div>
-
-    <div class="fronts__rows">
-      <article class="row tile" data-reveal>
-        <i class="row__icon ph ph-megaphone" aria-hidden="true"></i><h3>Gestão de redes</h3>
-        <p>Cuidamos das suas redes com conteúdo que conecta e engaja.</p>
-        <p class="terms">Conteúdo mensal, copywriting para anúncios, Google Meu Negócio</p>
-      </article>
-      <article class="row tile" data-reveal>
-        <i class="row__icon ph ph-chart-line-up" aria-hidden="true"></i><h3>Estratégia</h3>
-        <p>Planejamento personalizado com base em dados e objetivos claros.</p>
-        <p class="terms">Dados, objetivos, campanhas</p>
-      </article>
-      <article class="row tile" data-reveal>
-        <i class="row__icon ph ph-pen-nib" aria-hidden="true"></i><h3>Criação de conteúdo</h3>
-        <p>Produzimos conteúdos que comunicam, posicionam e vendem.</p>
-        <p class="terms">Roteiro, posts, conteúdo para redes sociais</p>
-      </article>
-      <article class="row tile" data-reveal>
-        <i class="row__icon ph ph-video-camera" aria-hidden="true"></i><h3>Filmagens e fotos</h3>
-        <p>Vídeos e fotos pensados para performance, não apenas estética.</p>
-        <p class="terms">Vídeo estratégico, color grading, fotografia com assinatura</p>
-      </article>
-    </div>
-  </section>
-
-  <!-- ============ 3. Portfólio: parede irregular de vídeos (ainda sem conteúdo) ============ -->
-  <section class="work tile tile--night" id="portfolio" aria-labelledby="work-title">
-    <div class="work__head">
-      <h2 class="work__title" id="work-title">Portfólio</h2>
-      <a class="link" href="https://www.instagram.com/creativeserjo" rel="noopener">Mais no Instagram <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>
-    </div>
-    <p class="work__hint"><i class="ph ph-cursor-click" aria-hidden="true"></i> Passe o mouse sobre um vídeo para ele tocar. No celular, toque.</p>
-
-    <!-- Para publicar um vídeo: preencha data-src (MP4) e data-poster. O resto já funciona. -->
-    <div class="wall">
-      <div class="wall__row" style="--h:330px">
-        <figure class="clip" style="--r:0.5625" data-clip data-src="" data-poster=""><div class="clip__frame"><video muted loop playsinline preload="none"></video><button class="clip__hit" type="button" aria-label="Vídeo de gastronomia, em breve"></button><span class="clip__empty" aria-hidden="true"><i class="ph ph-film-slate"></i>Em breve</span></div><figcaption><span>Gastronomia</span><span>9:16</span></figcaption></figure>
-        <figure class="clip clip--wide" style="--r:1.7778" data-clip data-src="" data-poster=""><div class="clip__frame"><video muted loop playsinline preload="none"></video><button class="clip__hit" type="button" aria-label="Vídeo automotivo, em breve"></button><span class="clip__empty" aria-hidden="true"><i class="ph ph-film-slate"></i>Em breve</span></div><figcaption><span>Automotivo</span><span>16:9</span></figcaption></figure>
-        <figure class="clip" style="--r:0.8" data-clip data-src="" data-poster=""><div class="clip__frame"><video muted loop playsinline preload="none"></video><button class="clip__hit" type="button" aria-label="Vídeo de saúde, em breve"></button><span class="clip__empty" aria-hidden="true"><i class="ph ph-film-slate"></i>Em breve</span></div><figcaption><span>Saúde</span><span>4:5</span></figcaption></figure>
-      </div>
-      <div class="wall__row" style="--h:250px">
-        <figure class="clip" style="--r:1" data-clip data-src="" data-poster=""><div class="clip__frame"><video muted loop playsinline preload="none"></video><button class="clip__hit" type="button" aria-label="Vídeo de hospitalidade, em breve"></button><span class="clip__empty" aria-hidden="true"><i class="ph ph-film-slate"></i>Em breve</span></div><figcaption><span>Hospitalidade</span><span>1:1</span></figcaption></figure>
-        <figure class="clip" style="--r:0.5625" data-clip data-src="" data-poster=""><div class="clip__frame"><video muted loop playsinline preload="none"></video><button class="clip__hit" type="button" aria-label="Vídeo de gastronomia, em breve"></button><span class="clip__empty" aria-hidden="true"><i class="ph ph-film-slate"></i>Em breve</span></div><figcaption><span>Gastronomia</span><span>9:16</span></figcaption></figure>
-        <figure class="clip clip--wide" style="--r:1.7778" data-clip data-src="" data-poster=""><div class="clip__frame"><video muted loop playsinline preload="none"></video><button class="clip__hit" type="button" aria-label="Vídeo de hospitalidade, em breve"></button><span class="clip__empty" aria-hidden="true"><i class="ph ph-film-slate"></i>Em breve</span></div><figcaption><span>Hospitalidade</span><span>16:9</span></figcaption></figure>
-        <figure class="clip" style="--r:0.5625" data-clip data-src="" data-poster=""><div class="clip__frame"><video muted loop playsinline preload="none"></video><button class="clip__hit" type="button" aria-label="Vídeo automotivo, em breve"></button><span class="clip__empty" aria-hidden="true"><i class="ph ph-film-slate"></i>Em breve</span></div><figcaption><span>Automotivo</span><span>9:16</span></figcaption></figure>
-      </div>
-      <div class="wall__row" style="--h:290px">
-        <figure class="clip" style="--r:0.8" data-clip data-src="" data-poster=""><div class="clip__frame"><video muted loop playsinline preload="none"></video><button class="clip__hit" type="button" aria-label="Vídeo de saúde, em breve"></button><span class="clip__empty" aria-hidden="true"><i class="ph ph-film-slate"></i>Em breve</span></div><figcaption><span>Saúde</span><span>4:5</span></figcaption></figure>
-        <figure class="clip clip--wide" style="--r:1.7778" data-clip data-src="" data-poster=""><div class="clip__frame"><video muted loop playsinline preload="none"></video><button class="clip__hit" type="button" aria-label="Vídeo de gastronomia, em breve"></button><span class="clip__empty" aria-hidden="true"><i class="ph ph-film-slate"></i>Em breve</span></div><figcaption><span>Gastronomia</span><span>16:9</span></figcaption></figure>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ 4. Método: sanfona de painéis tingidos ============
-       Com JavaScript, src/islands/metodo.tsx troca [data-stages] pelo HoverExpand_001 (Skiper UI),
-       lendo título, texto e ícone daqui. Sem JavaScript, fica esta sanfona. -->
-  <section class="method tile" id="metodo" aria-labelledby="method-title">
-    <div class="method__intro">
-      <h2 class="method__title" id="method-title" data-reveal>Como trabalhamos</h2>
-      <p data-reveal>Um processo criativo estruturado, da ideia à entrega final, com a sua aprovação em cada etapa.</p>
-    </div>
-    <div class="stages" data-stages>
-      <article class="stage stage--1 is-open">
-        <button class="stage__tab" type="button" aria-expanded="true" aria-controls="st-1"><span>Briefing</span></button>
-        <div class="stage__body" id="st-1"><i class="ph ph-clipboard-text" aria-hidden="true"></i><p>Entendemos a sua marca, o público e o que você quer alcançar antes de criar qualquer coisa.</p></div>
-      </article>
-      <article class="stage stage--2">
-        <button class="stage__tab" type="button" aria-expanded="false" aria-controls="st-2"><span>Roteiro</span></button>
-        <div class="stage__body" id="st-2"><i class="ph ph-note-pencil" aria-hidden="true"></i><p>Transformamos a estratégia em ideias e roteiros, na linguagem do marketing.</p></div>
-      </article>
-      <article class="stage stage--3">
-        <button class="stage__tab" type="button" aria-expanded="false" aria-controls="st-3"><span>Aprovação</span></button>
-        <div class="stage__body" id="st-3"><i class="ph ph-seal-check" aria-hidden="true"></i><p>Você aprova cada etapa antes da produção. Nada vai ao ar sem o seu ok.</p></div>
-      </article>
-      <article class="stage stage--4">
-        <button class="stage__tab" type="button" aria-expanded="false" aria-controls="st-4"><span>Execução</span></button>
-        <div class="stage__body" id="st-4"><i class="ph ph-rocket-launch" aria-hidden="true"></i><p>Gravamos, editamos e publicamos, com color grading profissional e acompanhamento.</p></div>
-      </article>
-    </div>
-  </section>
-
-  <!-- ============ 5. Marcas: esteiras de logos em movimento ============ -->
-  <section class="proof" aria-labelledby="proof-title">
-    <div class="proof__head tile tile--accent">
-      <h2 id="proof-title">Marcas que confiam no nosso trabalho</h2>
-      <div class="proof__side">
-        <i class="proof__mark ph ph-handshake" aria-hidden="true"></i>
-        <!-- Só existe com JavaScript e com movimento permitido: para e retoma as duas esteiras. -->
-        <button class="btn proof__pause" type="button" data-belt-toggle aria-label="Pausar o movimento das marcas"><i class="ph ph-pause" aria-hidden="true"></i><span>Pausar</span></button>
-      </div>
-    </div>
-    <div class="belt" data-belt>
-      <ul class="belt__track">
-        <li class="logo"><img src="../../assets/logos/logo-02.png" alt="Rede Bem Drogarias" width="439" height="145" loading="lazy"></li>
-        <li class="logo logo--dark"><img src="../../assets/logos/logo-03.png" alt="AGF" width="432" height="150" loading="lazy"></li>
-        <li class="logo"><img src="../../assets/logos/logo-04.png" alt="Cores &amp; Cia" width="288" height="260" loading="lazy"></li>
-        <li class="logo"><img src="../../assets/logos/logo-05.png" alt="AFS Distribuidora" width="216" height="143" loading="lazy"></li>
-        <li class="logo logo--dark"><img src="../../assets/logos/logo-13.png" alt="Piratininga" width="288" height="70" loading="lazy"></li>
-        <li class="logo"><img src="../../assets/logos/logo-06.png" alt="Magu Clean" width="184" height="180" loading="lazy"></li>
-        <li class="logo"><img src="../../assets/logos/logo-07.png" alt="Édmais" width="230" height="72" loading="lazy"></li>
-        <li class="logo logo--dark"><img src="../../assets/logos/logo-14.png" alt="Jaqueline Ramos, clínica estética" width="292" height="291" loading="lazy"></li>
-        <li class="logo"><img src="../../assets/logos/logo-08.png" alt="Unifeob" width="383" height="94" loading="lazy"></li>
+    <!-- ============ 8. Contato: faixa de fotos, título e o formulário numa barra só ============ -->
+    <section class="contact panel panel--field" id="contato" aria-labelledby="contact-title">
+      <ul class="strip" aria-hidden="true">
+        <li style="--w:3/4"><img src="https://picsum.photos/id/942/300/400?grayscale" alt="" loading="lazy"></li>
+        <li style="--w:1/1"><img src="https://picsum.photos/id/954/400/400?grayscale" alt="" loading="lazy"></li>
+        <li style="--w:3/2"><img src="https://picsum.photos/id/618/600/400?grayscale" alt="" loading="lazy"></li>
+        <li style="--w:3/4"><img src="https://picsum.photos/id/887/300/400?grayscale" alt="" loading="lazy"></li>
+        <li style="--w:1/1"><img src="https://picsum.photos/id/620/400/400?grayscale" alt="" loading="lazy"></li>
+        <li style="--w:3/2"><img src="https://picsum.photos/id/855/600/400?grayscale" alt="" loading="lazy"></li>
+        <li style="--w:3/4"><img src="https://picsum.photos/id/508/300/400?grayscale" alt="" loading="lazy"></li>
+        <li style="--w:1/1"><img src="https://picsum.photos/id/1081/400/400?grayscale" alt="" loading="lazy"></li>
+        <li style="--w:3/2"><img src="https://picsum.photos/id/942/600/400?grayscale" alt="" loading="lazy"></li>
+        <li style="--w:3/4"><img src="https://picsum.photos/id/954/300/400?grayscale" alt="" loading="lazy"></li>
       </ul>
-    </div>
-    <div class="belt belt--reverse" data-belt>
-      <ul class="belt__track">
-        <li class="logo"><img src="../../assets/logos/logo-09.png" alt="Palini Alves" width="308" height="100" loading="lazy"></li>
-        <li class="logo logo--dark"><img src="../../assets/logos/logo-15.png" alt="Joice Silva Farmacêutica" width="220" height="187" loading="lazy"></li>
-        <li class="logo"><img src="../../assets/logos/logo-10.png" alt="Confort Clean" width="198" height="199" loading="lazy"></li>
-        <li class="logo logo--dark"><img src="../../assets/logos/logo-16.png" alt="Survey Brasil" width="249" height="61" loading="lazy"></li>
-        <li class="logo"><img src="../../assets/logos/logo-12.png" alt="Cooper Batata" width="192" height="228" loading="lazy"></li>
-        <li class="logo logo--dark"><img src="../../assets/logos/logo-17.png" alt="Eduzz" width="293" height="83" loading="lazy"></li>
-        <li class="logo logo--dark"><img src="../../assets/logos/logo-11.png" alt="WF" width="203" height="123" loading="lazy"></li>
-        <li class="logo"><img src="../../assets/logos/logo-19.png" alt="Textil São João" width="214" height="69" loading="lazy"></li>
-        <li class="logo logo--dark"><img src="../../assets/logos/logo-18.png" alt="Select" width="177" height="55" loading="lazy"></li>
-      </ul>
-    </div>
-  </section>
 
-  <!-- ============ 6. Planos: tabela grande, sem preços ============ -->
-  <section class="plans tile" id="planos" aria-labelledby="plans-title">
-    <div class="plans__head">
-      <h2 class="plans__title" id="plans-title" data-reveal>Escolha o seu plano</h2>
-      <p data-reveal>Cada plano é o anterior somado a mais frentes. Os valores são combinados na conversa.</p>
-    </div>
+      <h2 class="contact__title" id="contact-title" data-reveal>Vamos crescer juntos?</h2>
 
-    <table class="ptable">
-      <caption class="vh">O que cada plano inclui</caption>
-      <thead>
-        <tr>
-          <th scope="col"><span class="vh">Item</span></th>
-          <th scope="col">LITE</th>
-          <th scope="col" class="rec">PRO</th>
-          <th scope="col">PRIME</th>
-        </tr>
-        <tr class="ptable__for">
-          <td></td>
-          <td>Para quem está começando</td>
-          <td class="rec">O mais escolhido</td>
-          <td>Para resultados acelerados</td>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><th scope="row">Posts por mês</th><td>Até 12</td><td class="rec">Até 16</td><td>Até 20</td></tr>
-        <tr><th scope="row">Gestão de redes sociais</th><td><i class="ph ph-check" aria-hidden="true"></i><span class="vh">Incluída</span></td><td class="rec"><i class="ph ph-check" aria-hidden="true"></i><span class="vh">Incluída</span></td><td><i class="ph ph-check" aria-hidden="true"></i><span class="vh">Incluída</span></td></tr>
-        <tr><th scope="row">Copywriting para anúncios</th><td><i class="ph ph-check" aria-hidden="true"></i><span class="vh">Incluído</span></td><td class="rec"><i class="ph ph-check" aria-hidden="true"></i><span class="vh">Incluído</span></td><td><i class="ph ph-check" aria-hidden="true"></i><span class="vh">Incluído</span></td></tr>
-        <tr><th scope="row">Produção audiovisual</th><td><i class="ph ph-check" aria-hidden="true"></i><span class="vh">Incluída</span></td><td class="rec"><i class="ph ph-check" aria-hidden="true"></i><span class="vh">Incluída</span></td><td><i class="ph ph-check" aria-hidden="true"></i><span class="vh">Incluída</span></td></tr>
-        <tr><th scope="row">Cobertura de eventos</th><td class="no"><i class="ph ph-x" aria-hidden="true"></i><span class="vh">Não incluída</span></td><td class="rec"><i class="ph ph-check" aria-hidden="true"></i><span class="vh">Incluída</span></td><td><i class="ph ph-check" aria-hidden="true"></i><span class="vh">Incluída</span></td></tr>
-        <tr><th scope="row">Acompanhamento da agência</th><td class="no"><i class="ph ph-x" aria-hidden="true"></i><span class="vh">Não incluído</span></td><td class="rec">Semanal</td><td>Diário</td></tr>
-        <tr><th scope="row">Google Meu Negócio</th><td class="no"><i class="ph ph-x" aria-hidden="true"></i><span class="vh">Não incluído</span></td><td class="rec no"><i class="ph ph-x" aria-hidden="true"></i><span class="vh">Não incluído</span></td><td><i class="ph ph-check" aria-hidden="true"></i><span class="vh">Incluído</span></td></tr>
-        <tr><th scope="row">Reuniões quinzenais</th><td class="no"><i class="ph ph-x" aria-hidden="true"></i><span class="vh">Não incluídas</span></td><td class="rec no"><i class="ph ph-x" aria-hidden="true"></i><span class="vh">Não incluídas</span></td><td><i class="ph ph-check" aria-hidden="true"></i><span class="vh">Incluídas</span></td></tr>
-        <tr><th scope="row">Desenvolvimento de sites</th><td class="no"><i class="ph ph-x" aria-hidden="true"></i><span class="vh">Não incluído</span></td><td class="rec no"><i class="ph ph-x" aria-hidden="true"></i><span class="vh">Não incluído</span></td><td><i class="ph ph-check" aria-hidden="true"></i><span class="vh">Incluído</span></td></tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <td></td>
-          <td><a class="btn btn--ink" href="https://wa.me/5519998406369?text=Ol%C3%A1!%20Tenho%20interesse%20no%20plano%20LITE%20da%20Somark.">Quero o LITE</a></td>
-          <td class="rec"><a class="btn btn--ink" href="https://wa.me/5519998406369?text=Ol%C3%A1!%20Tenho%20interesse%20no%20plano%20PRO%20da%20Somark.">Quero o PRO</a></td>
-          <td><a class="btn btn--ink" href="https://wa.me/5519998406369?text=Ol%C3%A1!%20Tenho%20interesse%20no%20plano%20PRIME%20da%20Somark.">Quero o PRIME</a></td>
-        </tr>
-      </tfoot>
-    </table>
+      <form class="wa-form" action="https://wa.me/5519998406369" method="get" target="_blank" data-wa-form>
+        <label class="cell">
+          <span class="vh">Seu nome</span>
+          <input type="text" name="nome" placeholder="Seu nome" autocomplete="name" enterkeyhint="next">
+        </label>
+        <label class="cell">
+          <span class="vh">Do que a sua marca precisa?</span>
+          <input type="text" name="text" placeholder="Do que a sua marca precisa?" enterkeyhint="send">
+        </label>
+        <button class="wa-form__send" type="submit"><i class="ph-fill ph-whatsapp-logo" aria-hidden="true"></i> Enviar no WhatsApp</button>
+      </form>
+      <div class="contact__small">
+        <p>O botão abre o WhatsApp com a sua mensagem já escrita.</p>
+        <p>Se preferir e-mail, escreva para o Sergio no endereço <a class="link" href="mailto:sergio.godoyoliveira@gmail.com">sergio.godoyoliveira@gmail.com</a></p>
+      </div>
+    </section>
 
-    <!-- no celular, a tabela vira um bloco por plano -->
-    <div class="pcards">
-      <article class="pcard">
-        <h3>LITE</h3>
-        <p class="pcard__for">Para quem está começando</p>
-        <dl>
-          <div><dt>Posts por mês</dt><dd>Até 12</dd></div>
-          <div><dt>Inclui</dt><dd>Gestão de redes sociais, copywriting para anúncios e produção audiovisual</dd></div>
-        </dl>
-        <a class="btn btn--ink" href="https://wa.me/5519998406369?text=Ol%C3%A1!%20Tenho%20interesse%20no%20plano%20LITE%20da%20Somark.">Quero o LITE</a>
-      </article>
-      <article class="pcard pcard--rec">
-        <h3>PRO</h3>
-        <p class="pcard__for">O mais escolhido</p>
-        <dl>
-          <div><dt>Posts por mês</dt><dd>Até 16</dd></div>
-          <div><dt>Tudo do LITE, mais</dt><dd>Cobertura de eventos e acompanhamento semanal da agência</dd></div>
-        </dl>
-        <a class="btn btn--ink" href="https://wa.me/5519998406369?text=Ol%C3%A1!%20Tenho%20interesse%20no%20plano%20PRO%20da%20Somark.">Quero o PRO</a>
-      </article>
-      <article class="pcard">
-        <h3>PRIME</h3>
-        <p class="pcard__for">Para resultados acelerados</p>
-        <dl>
-          <div><dt>Posts por mês</dt><dd>Até 20</dd></div>
-          <div><dt>Tudo do PRO, mais</dt><dd>Acompanhamento diário, Google Meu Negócio, reuniões quinzenais e desenvolvimento de sites</dd></div>
-        </dl>
-        <a class="btn btn--ink" href="https://wa.me/5519998406369?text=Ol%C3%A1!%20Tenho%20interesse%20no%20plano%20PRIME%20da%20Somark.">Quero o PRIME</a>
-      </article>
-    </div>
-  </section>
+  </main>
 
-  <!-- ============ 7. Sobre: foto larga, bloco de cor, fatos ============ -->
-  <section class="about" aria-labelledby="about-title">
-    <div class="about__intro tile">
-      <h2 class="about__title" id="about-title" data-reveal>Quem está por trás</h2>
-      <p data-reveal><strong>Sergio Godoy</strong>, fundador da Somark, cria conteúdo audiovisual com estratégia: vídeos e fotos pensados para performance e posicionamento de marca.</p>
-    </div>
-    <figure class="about__photo photo tile" data-reveal>
-      <img src="https://picsum.photos/id/1081/1400/875?grayscale" alt="" width="1400" height="875" loading="lazy">
-      <figcaption class="paper">Versátil, aberto a ideias e sempre fora da caixa, Sergio leva a mesma estratégia para a gestão de redes, o roteiro e a produção de cada cliente.</figcaption>
-    </figure>
-    <div class="about__side">
-      <blockquote class="about__quote tile tile--field">
-        <p>“Nunca enxerguei o cotidiano como algo comum.”</p>
-        <cite>Sergio Godoy</cite>
-      </blockquote>
-      <dl class="about__facts tile">
-        <div><dt>Fundador</dt><dd>Sergio Godoy</dd></div>
-        <div><dt>Frentes</dt><dd>Quatro</dd></div>
-        <div><dt>Planos</dt><dd>LITE, PRO e PRIME</dd></div>
-        <div><dt>Atendimento</dt><dd>WhatsApp e e-mail</dd></div>
-      </dl>
-    </div>
-  </section>
-
-  <!-- ============ 8. Contato: faixa de fotos + barra de três células ============ -->
-  <section class="contact tile tile--field" id="contato" aria-labelledby="contact-title">
-    <ul class="strip" aria-hidden="true">
-      <li style="--w:3/4"><img src="https://picsum.photos/id/942/300/400?grayscale" alt="" loading="lazy"></li>
-      <li style="--w:1/1"><img src="https://picsum.photos/id/954/400/400?grayscale" alt="" loading="lazy"></li>
-      <li style="--w:3/2"><img src="https://picsum.photos/id/618/600/400?grayscale" alt="" loading="lazy"></li>
-      <li style="--w:3/4"><img src="https://picsum.photos/id/887/300/400?grayscale" alt="" loading="lazy"></li>
-      <li style="--w:1/1"><img src="https://picsum.photos/id/620/400/400?grayscale" alt="" loading="lazy"></li>
-      <li style="--w:3/2"><img src="https://picsum.photos/id/855/600/400?grayscale" alt="" loading="lazy"></li>
-      <li style="--w:3/4"><img src="https://picsum.photos/id/508/300/400?grayscale" alt="" loading="lazy"></li>
-      <li style="--w:1/1"><img src="https://picsum.photos/id/1081/400/400?grayscale" alt="" loading="lazy"></li>
-      <li style="--w:3/2"><img src="https://picsum.photos/id/942/600/400?grayscale" alt="" loading="lazy"></li>
-      <li style="--w:3/4"><img src="https://picsum.photos/id/954/300/400?grayscale" alt="" loading="lazy"></li>
-    </ul>
-
-    <h2 class="contact__title" id="contact-title" data-reveal>Vamos crescer juntos?</h2>
-
-    <form class="wa-form" action="https://wa.me/5519998406369" method="get" target="_blank" data-wa-form>
-      <label class="cell">
-        <span class="vh">Seu nome</span>
-        <input type="text" name="nome" placeholder="Seu nome" autocomplete="name" enterkeyhint="next">
-      </label>
-      <label class="cell">
-        <span class="vh">Do que a sua marca precisa?</span>
-        <input type="text" name="text" placeholder="Do que a sua marca precisa?" enterkeyhint="send">
-      </label>
-      <button class="cell cell--send" type="submit"><i class="ph-fill ph-whatsapp-logo" aria-hidden="true"></i> Enviar no WhatsApp</button>
-    </form>
-    <div class="contact__small">
-      <p>O botão abre o WhatsApp com a sua mensagem já escrita.</p>
-      <p>Se preferir e-mail, escreva para o Sergio no endereço <a class="link" href="mailto:sergio.godoyoliveira@gmail.com">sergio.godoyoliveira@gmail.com</a></p>
-    </div>
-  </section>
-
-  <!-- ============ Rodapé ============
-       Com JavaScript, src/islands/links.tsx troca os a.link (aqui e nas outras seções, menos a abertura) pelo Link004 (Skiper UI). -->
-  <footer class="foot tile tile--field" aria-labelledby="foot-title">
+  <!-- ============ Rodapé: continua o bloco verde do contato, separado por um fio ============
+       Com JavaScript, src/islands/links.tsx troca os a.link (aqui e no resto da página) pelo Link004 (Skiper UI). -->
+  <footer class="foot panel panel--field" aria-labelledby="foot-title">
     <h2 class="vh" id="foot-title">Somark Mídia</h2>
 
     <!-- Esquerda: a Somark -->
     <div class="foot__side foot__side--somark">
       <div class="foot__brand">
-        <img class="foot__logo" src="../../assets/brand/somark-logo-branco.png" alt="Somark Mídia" width="903" height="367" loading="lazy">
+        <img class="foot__logo" src="../../assets/brand/somark-logo-branco.svg" alt="Somark Mídia" width="903" height="367" loading="lazy">
         <p class="foot__note">Agência criativa e orientada por dados. Gestão de redes, estratégia, criação de conteúdo, filmagens e fotos.</p>
       </div>
       <div class="foot__navs">
@@ -395,7 +482,7 @@
     </div>
   </footer>
 
-</main>
+</div>
 
 <script type="module" src="js/main.js"></script>
 <script type="module" src="/src/islands/metodo.tsx"></script>

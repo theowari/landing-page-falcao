@@ -18,6 +18,7 @@ export default defineConfig({
         main: path.resolve(root, "index.html"),
         v1: path.resolve(root, "prototipos/v1/index.html"),
         v2: path.resolve(root, "prototipos/v2/index.html"),
+        v3: path.resolve(root, "prototipos/v3/index.html"),
       },
     },
   },

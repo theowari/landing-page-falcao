@@ -24,7 +24,9 @@ Este documento reúne o contexto, as decisões, o conteúdo de origem e o que fa
 | 10 | Página **centralizada e compacta** no desktop; o celular é o acesso principal | João Otávio |
 | 11 | **Fotos provisórias** no lugar das do PDF, que se repetiam | João Otávio |
 | 12 | **Ícones Phosphor** | João Otávio |
-| 13 | V1 mantido em `prototipos/v1`; **V2** é o redesign atual em `prototipos/v2` | João Otávio |
+| 13 | V1 mantido em `prototipos/v1`; V2 em `prototipos/v2` | João Otávio |
+| 14 | **V3** em `prototipos/v3`, ramificado da V2, é a versão atual | João Otávio |
+| 15 | A marca fala como **agência institucional**: o Sergio deixa de ser o rosto da marca e o "Sobre" apresenta a agência | João Otávio (2026-10-20) |
 
 ---
 
@@ -149,7 +151,6 @@ Só o **texto** é aproveitado. O visual antigo não segue (ver `identidade-visu
 - [ ] Confirmar os números de resultado (+95%, +35%, +65%)
 - [ ] "Acompanhamento do PRO": semanal ou diário
 - [ ] O cliente quer manter a seção de planos mesmo sem valores?
-- [ ] O "Sobre" fala do Sergio como fundador (é o que está) ou vira texto institucional?
 - [ ] O site do Canva fica no ar até o novo estar pronto?
 - [ ] Quer filtro de segmento no portfólio (hospitalidade, gastronomia, automotivo, saúde) quando houver vídeos?
 
@@ -159,7 +160,10 @@ Só o **texto** é aproveitado. O visual antigo não segue (ver `identidade-visu
 
 Cada protótipo é um site estático (HTML, CSS e JavaScript puros, sem build). Para ver, sirva a pasta do projeto por um servidor local (os vídeos precisam de HTTP) e abra o `index.html` da raiz, que lista os dois. Os dois usam `assets/` em comum.
 
-### V2 (atual): `prototipos/v2/`, o quadro de blocos
+### V3 (atual): `prototipos/v3/`
+Ramificação da V2 (mesmo HTML, CSS e JavaScript no ponto de partida). As ilhas React em `src/islands/` são compartilhadas com a V2. O contexto de produto está em `PRODUCT.md`, na raiz.
+
+### V2: `prototipos/v2/`, o quadro de blocos
 A página é um quadro de blocos encaixados, centralizado e compacto no desktop, de borda a borda no celular.
 
 1. **Abertura:** nome grande, atalhos, foto, serviços, a frase de posicionamento, os três números e o botão do WhatsApp.

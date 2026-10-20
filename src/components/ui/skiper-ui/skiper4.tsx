@@ -1,13 +1,18 @@
-Utilize o template de componenente abaixo para pegar o quarto botão de toggle bright e dark mode e aplique-o na página. Aplique também o bright e dark mode utilizando o VIEW TRANSITION API
-
-
 "use client";
 
+import { ArrowCounterClockwiseIcon, DotsSixIcon } from "@phosphor-icons/react";
 import { motion } from "framer-motion";
-import { GripHorizontal, RefreshCcw } from "lucide-react";
 import React, { useState } from "react";
 
 import { cn } from "@/lib/utils";
+
+/*
+ * Adaptado para a Somark:
+ * - Os ícones do lucide-react no painel de demonstração viraram Phosphor.
+ * - ThemeToggleButton4 pode ser controlado: com `isDark` vindo de fora (o
+ *   useThemeToggle do Skiper 26), o ícone mostra o tema real e o `onClick` é
+ *   quem troca o tema. Sem `isDark`, alterna sozinho como no original.
+ */
 
 const Skiper4 = () => {
   const [scale, setScale] = useState(0);
@@ -87,7 +92,7 @@ const Options = ({
           onPointerUp={() => setIsDragging(false)}
           className="size-4 cursor-grab active:cursor-grabbing"
         >
-          <GripHorizontal className="size-4 opacity-50" />
+          <DotsSixIcon className="size-4 opacity-50" />
         </span>
 
         <p
@@ -100,7 +105,7 @@ const Options = ({
         >
           Options
           <span className="group-active:-rotate-360 rotate-0 cursor-pointer transition-all duration-300 group-hover:rotate-90">
-            <RefreshCcw className="size-4 opacity-50" />
+            <ArrowCounterClockwiseIcon className="size-4 opacity-50" />
           </span>{" "}
         </p>
       </div>
@@ -316,22 +321,31 @@ export const ThemeToggleButton3 = ({
 //..................................................... //
 export const ThemeToggleButton4 = ({
   className = "",
-}: {
-  className?: string;
+  isDark: isDarkProp,
+  onClick,
+  ...props
+}: React.ComponentProps<"button"> & {
+  isDark?: boolean;
 }) => {
-  const [isDark, setIsDark] = useState(false);
+  const [isDarkState, setIsDarkState] = useState(false);
+  const isDark = isDarkProp ?? isDarkState;
   return (
     <button
       type="button"
+      {...props}
       className={cn(
         "rounded-full transition-all duration-300 active:scale-95",
         isDark ? "bg-black text-white" : "bg-white text-black",
         className,
       )}
-      onClick={() => setIsDark(!isDark)}
+      onClick={(event) => {
+        if (isDarkProp === undefined) setIsDarkState(!isDarkState);
+        onClick?.(event);
+      }}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
+        className="block size-full"
         aria-hidden="true"
         strokeWidth="0.7"
         stroke="currentColor"

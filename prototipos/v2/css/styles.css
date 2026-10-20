@@ -13,12 +13,20 @@
   --field: #3F523D;       /* verde da marca */
   --night: #18231B;       /* verde quase preto */
   --night-2: #1F2C22;
+  --night-row: #263428;   /* listra sobre o --night (linhas alternadas do plano em destaque) */
   --green: #247D1A;
   --accent: #00FF8C;
   --ink: #0F1A12;
   --ink-soft: #3C4A3F;
   --light: #F3F7F2;
   --light-soft: #D3DFD0;
+
+  /* papéis que o tema escuro precisa separar do --ink */
+  --on-accent: #0F1A12;       /* texto sobre o --accent, igual nos dois temas */
+  --on-accent-soft: #3C4A3F;
+  --btn: var(--ink);
+  --btn-hover: var(--field);
+  --logo-bg: var(--tile);     /* os logos foram feitos para fundo claro */
 
   --gap: 8px;
   --pad: clamp(16px, 2cqi, 24px);
@@ -38,6 +46,28 @@
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-in-out: cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+/* Tema escuro. A classe .dark no <html> vem de src/islands/tema.tsx (next-themes)
+   e do script do <head>, que a aplica antes da primeira pintura.
+   Os blocos claros escurecem e o texto clareia; o verde da marca (--field),
+   o --accent e o --light continuam os mesmos. */
+.dark {
+  --desk: #0C130E;
+  --tile: #142019;
+  --tile-2: #1C2B21;
+  --sage: #4B6047;
+  --night: #070C09;
+  --night-2: #0B120D;
+  --night-row: #111B14;
+  --green: #4CB23C;
+  --ink: #E5EDE3;
+  --ink-soft: #A2B39F;
+
+  --btn: var(--field);
+  --btn-hover: var(--sage);
+  --logo-bg: var(--light);
+  color-scheme: dark;
 }
 
 /* ---------- Base (com a base de mobile-native) ---------- */
@@ -64,11 +94,11 @@ button, a, [role="button"], label { touch-action: manipulation; }
 button { font: inherit; color: inherit; }
 button, .btn, .jump, .rtile--action { -webkit-user-select: none; user-select: none; }
 input { font-size: 16px; }
-::selection { background: var(--accent); color: var(--ink); }
+::selection { background: var(--accent); color: var(--on-accent); }
 .ph, .ph-fill { vertical-align: -0.12em; }
 
 .vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
-.skip { position: absolute; left: 12px; top: -80px; z-index: 10; background: var(--ink); color: var(--light); padding: 12px 16px; border-radius: var(--radius); }
+.skip { position: absolute; left: 12px; top: -80px; z-index: 10; background: var(--ink); color: var(--desk); padding: 12px 16px; border-radius: var(--radius); }
 .skip:focus { top: 12px; }
 :focus-visible { outline: 3px solid var(--green); outline-offset: 2px; }
 .tile--field :focus-visible, .tile--night :focus-visible, .stage--1 :focus-visible, .stage--2 :focus-visible { outline-color: var(--accent); }
@@ -85,7 +115,7 @@ input { font-size: 16px; }
 .tile { background: var(--tile); border-radius: var(--radius); padding: var(--pad); min-width: 0; }
 .tile--field { background: var(--field); color: var(--light); }
 .tile--night { background: var(--night); color: var(--light); }
-.tile--accent { background: var(--accent); color: var(--ink); }
+.tile--accent { background: var(--accent); color: var(--on-accent); }
 
 /* fotos provisórias: todas com o mesmo tratamento (tom verde da marca) */
 .photo { padding: 0; overflow: hidden; background: var(--field); position: relative; }
@@ -96,7 +126,7 @@ input { font-size: 16px; }
   display: inline-flex; align-items: center; justify-content: center; gap: 8px;
   min-height: 48px; padding: 0 18px;
   border: 0; border-radius: var(--radius);
-  background: var(--ink); color: var(--light);
+  background: var(--btn); color: var(--light);
   font: 600 var(--t-body)/1 var(--font-text); text-decoration: none; white-space: nowrap; cursor: pointer;
   transition: transform 140ms var(--ease-out), background-color 180ms ease, color 180ms ease;
 }
@@ -108,8 +138,10 @@ input { font-size: 16px; }
   text-decoration-color: color-mix(in srgb, currentColor 45%, transparent);
   transition: text-decoration-color 180ms ease;
 }
+/* Com JavaScript, src/islands/links.tsx troca os .link pelo Link004 (Skiper UI): o hover é o preenchimento. */
+.link--fill { text-decoration: none; }
 @media (hover: hover) and (pointer: fine) {
-  .btn:hover { background: var(--field); }
+  .btn:hover { background: var(--btn-hover); }
   .link:hover { text-decoration-color: currentColor; }
 }
 
@@ -128,12 +160,9 @@ input { font-size: 16px; }
   padding: 0; overflow: hidden;
   display: flex; align-items: center; justify-content: center;
 }
-.band__name {
-  font-family: var(--font-display); font-weight: 600;
-  font-size: var(--t-name); line-height: 0.8; letter-spacing: -0.045em;
-  white-space: nowrap; color: var(--light);
-  padding-top: 0.06em;
-}
+.band__name { height: 100%; display: flex; align-items: center; justify-content: center; padding: 14px var(--pad); }
+/* logo branco em PNG transparente: só funciona sobre fundo escuro (--field, igual nos dois temas) */
+.band__logo { height: 100%; width: auto; }
 
 .jumps { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--gap); }
 .jump {
@@ -147,6 +176,9 @@ input { font-size: 16px; }
   .jump:hover { background: var(--tile-2); }
   .jump:hover i { transform: translate(2px, 2px); }
 }
+/* bloco do tema (src/islands/tema.tsx): só existe com JavaScript */
+.jumps:has(> .jump-theme) { grid-template-columns: repeat(4, minmax(0, 1fr)) 64px; }
+.jump-theme { padding: 0; min-height: 64px; }
 
 .rail-left { grid-column: 1 / span 3; display: grid; grid-template-rows: minmax(0, 1fr) auto; gap: var(--gap); min-height: 0; }
 .facts__title { font-size: var(--t-small); font-weight: 600; color: var(--ink-soft); margin-bottom: 12px; }
@@ -165,7 +197,7 @@ input { font-size: 16px; }
 .rtile--3 { background: var(--sage); }
 .rtile--4 { background: var(--field); color: var(--light); }
 .rtile--4 i { font-size: 1.5rem; }
-.rtile--action { background: var(--accent); color: var(--ink); transition: transform 140ms var(--ease-out), background-color 180ms ease; }
+.rtile--action { background: var(--accent); color: var(--on-accent); transition: transform 140ms var(--ease-out), background-color 180ms ease; }
 .rtile--action i { font-size: 1.75rem; }
 .rtile--action span { font-size: var(--t-body); font-weight: 700; }
 .rtile--action:active { transform: scale(0.98); }
@@ -174,9 +206,11 @@ input { font-size: 16px; }
 @container board (max-width: 760px) {
   .hero { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: none; }
   .band { height: clamp(84px, 24cqi, 120px); }
-  .band__name { font-size: 15.4cqi; }
+  .band__name { padding: 10px var(--pad); }
   .jumps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .jump { min-height: 56px; }
+  .jumps:has(> .jump-theme) { grid-template-columns: repeat(2, minmax(0, 1fr)) 56px; }
+  .jump-theme { grid-column: 3; grid-row: 1 / span 2; min-height: 0; }
   .center { grid-column: 1 / -1; order: 1; grid-template-rows: auto auto; }
   .center .photo--big { aspect-ratio: 4 / 3; }
   .rail-right { grid-column: 1 / -1; order: 2; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: none; }
@@ -310,7 +344,7 @@ input { font-size: 16px; }
 .logo {
   flex: none; width: clamp(150px, 19cqi, 220px); aspect-ratio: 3 / 2;
   display: grid; place-items: center; padding: 18px;
-  background: var(--tile); border-radius: var(--radius);
+  background: var(--logo-bg); border-radius: var(--radius);
 }
 .logo--dark { background: var(--field); }
 .logo img { max-height: 64px; max-width: 78%; width: auto; height: auto; object-fit: contain; }
@@ -343,12 +377,17 @@ input { font-size: 16px; }
 .ptable tbody tr:nth-child(odd) > * { background: var(--tile-2); }
 .ptable tbody tr:nth-child(odd) > :first-child { border-radius: var(--radius) 0 0 var(--radius); }
 .ptable tbody tr:nth-child(odd) > :last-child { border-radius: 0 var(--radius) var(--radius) 0; }
-.ptable .rec, .ptable tbody tr:nth-child(odd) > .rec { background: var(--accent); }
+/* PRO: coluna no verde do portfólio, com as mesmas linhas alternadas das outras */
+.ptable .rec { background: var(--night); color: var(--light); }
+.ptable tbody tr:nth-child(odd) > .rec { background: var(--night-row); }
 .ptable thead .rec { border-radius: var(--radius) var(--radius) 0 0; }
-.ptable .ptable__for .rec { color: var(--ink); }
+.ptable .ptable__for .rec { color: var(--light-soft); }
 .ptable tfoot .rec { border-radius: 0 0 var(--radius) var(--radius); }
 .ptable td.no { color: var(--ink-soft); }
+.ptable td.rec.no { color: var(--light-soft); }
 .ptable td { font-weight: 600; }
+.ptable td > .ph { font-size: 1.375rem; vertical-align: -0.25em; }
+.ptable .rec .btn, .pcard--rec .btn { --btn: var(--field); --btn-hover: color-mix(in srgb, var(--field) 80%, var(--light)); }
 .ptable tfoot td { padding-top: 18px; padding-bottom: 18px; }
 .pcards { display: none; }
 @container board (max-width: 760px) {
@@ -356,11 +395,12 @@ input { font-size: 16px; }
   .ptable { display: none; }
   .pcards { display: grid; gap: var(--gap); }
   .pcard { background: var(--tile-2); border-radius: var(--radius); padding: var(--lead-in) 18px 18px; display: grid; gap: 16px; }
-  .pcard--rec { background: var(--accent); }
+  .pcard--rec { background: var(--night); color: var(--light); }
   .pcard h3 { font-family: var(--font-display); font-weight: 600; font-size: var(--t-head); line-height: 1; letter-spacing: -0.035em; }
   .pcard__for { margin-top: -10px; font-size: var(--t-small); font-weight: 500; }
   .pcard dl { display: grid; gap: 12px; }
   .pcard dt { font-size: var(--t-small); color: var(--ink-soft); }
+  .pcard--rec dt { color: var(--light-soft); }
   .pcard dd { font-weight: 600; }
   .pcard .btn { width: 100%; }
 }
@@ -421,7 +461,7 @@ input { font-size: 16px; }
 .cell:focus-within { outline: 3px solid var(--accent); outline-offset: 2px; }
 .cell--send {
   display: flex; align-items: center; justify-content: center; gap: 10px;
-  border: 0; cursor: pointer; background: var(--accent); color: var(--ink);
+  border: 0; cursor: pointer; background: var(--accent); color: var(--on-accent);
   font: 700 var(--t-body)/1 var(--font-text);
   transition: transform 140ms var(--ease-out), background-color 180ms ease;
 }
@@ -441,32 +481,39 @@ input { font-size: 16px; }
 }
 
 /* ==========================================================================
-   Rodapé: a marca construída em blocos
+   Rodapé
    ========================================================================== */
-.foot { display: grid; gap: 40px; padding-top: var(--lead-in); }
-.blocks { display: flex; align-items: flex-end; gap: 4px; height: clamp(140px, 26cqi, 300px); }
-.blocks span {
-  flex: 1 1 0; height: var(--h); border-radius: var(--radius);
-  display: flex; align-items: flex-end; justify-content: center; overflow: hidden;
-  font-family: var(--font-display); font-weight: 600; font-size: var(--t-name); line-height: 0.78;
-  color: var(--tile);
+/* O rodapé inteiro fica no verde da marca (igual nos dois temas): à esquerda a Somark,
+   à direita os créditos da Zora. Os dois copyrights descem até a mesma linha. */
+.foot {
+  --foot-rule: color-mix(in srgb, var(--light) 18%, transparent);
+  display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 40px var(--gap);
+  padding-top: var(--lead-in);
 }
-.b1 { background: var(--field); }
-.b2 { background: var(--night); }
-.b3 { background: var(--green); }
-.b4 { background: var(--sage); }
-.b5 { background: var(--field); }
-.b6 { background: var(--night); }
-.foot__cols { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 24px var(--gap); }
-.foot__cols nav { grid-column: span 3; display: grid; gap: 8px; align-content: start; justify-items: start; }
-.foot__cols nav .link i { font-size: 1.1rem; }
-.foot__head { font-size: var(--t-small); color: var(--ink-soft); margin-bottom: 4px; }
-.foot__note { grid-column: 8 / -1; color: var(--ink-soft); max-width: 34ch; }
-.foot__last { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; font-size: var(--t-small); color: var(--ink-soft); }
+.foot__side { display: flex; flex-direction: column; gap: 40px; min-width: 0; }
+.foot__side--somark { grid-column: 1 / span 7; }
+.foot__side--zora { grid-column: 9 / -1; padding-left: var(--pad); border-left: 1px solid var(--foot-rule); }
+.foot nav { display: grid; gap: 8px; align-content: start; justify-items: start; }
+.foot nav .link i { font-size: 1.1rem; }
+.foot__head { font-size: var(--t-small); color: var(--light-soft); margin-bottom: 4px; }
+.foot__brand { display: grid; gap: 20px; align-content: start; }
+.foot__logo { width: min(240px, 100%); height: auto; }
+.foot__note { color: var(--light-soft); max-width: 34ch; }
+.foot__navs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px var(--gap); }
+.foot__credit .foot__head { margin-bottom: 8px; }
+.foot__zora { font-family: var(--font-display); font-weight: 600; font-size: var(--t-lead); line-height: 1; letter-spacing: -0.02em; }
+.foot__side--zora .link { overflow-wrap: anywhere; }
+.foot__last {
+  margin-top: auto; min-height: 40px; padding-top: 20px; border-top: 1px solid var(--foot-rule);
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+  font-size: var(--t-small); color: var(--light-soft);
+}
+.foot__last .link { color: var(--light); }
+/* o --btn padrão some no verde (no escuro ele é o próprio --field): aqui o botão é claro */
+.foot .btn { --btn: var(--light); --btn-hover: var(--light-soft); color: var(--field); }
 @container board (max-width: 760px) {
-  .blocks { gap: 3px; }
-  .foot__cols nav { grid-column: span 6; }
-  .foot__note { grid-column: 1 / -1; }
+  .foot__side--somark, .foot__side--zora { grid-column: 1 / -1; }
+  .foot__side--zora { padding-left: 0; padding-top: 40px; border-left: 0; border-top: 1px solid var(--foot-rule); }
 }
 
 /* ==========================================================================
@@ -482,6 +529,7 @@ input { font-size: 16px; }
   .js .jumps > :nth-child(2) { animation-delay: 170ms; }
   .js .jumps > :nth-child(3) { animation-delay: 220ms; }
   .js .jumps > :nth-child(4) { animation-delay: 270ms; }
+  .js .jumps > :nth-child(5) { animation-delay: 320ms; }
   .js .center > :nth-child(1) { animation-delay: 300ms; }
   .js .center > :nth-child(2) { animation-delay: 380ms; }
   .js .rail-left > :nth-child(1) { animation-delay: 340ms; }

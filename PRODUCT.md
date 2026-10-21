@@ -35,7 +35,7 @@ Three things, together:
 
 ## Capabilities and Constraints
 
-- Static HTML/CSS/JS pages built with Vite, with small React islands (`src/islands/`) for the theme toggle, method accordion, links and cursor. Each prototype lives in `prototipos/vN/` and shares `assets/`. V3 (`prototipos/v3/`) is a fork of V2 and is the current working version.
+- Static HTML/CSS/JS pages built with Vite, with small React islands (`src/islands/`) for the theme toggle, method accordion, services accordion (Skiper 53), links and cursor. Each prototype lives in `prototipos/vN/` and shares `assets/`. V3 (`prototipos/v3/`) is a fork of V2 and is the current working version.
 - Portfolio videos play **on the site itself** (no YouTube embed), muted, on hover on desktop and on tap on mobile; they load only on first interaction. No real videos exist yet.
 - Client logos run in an automatic belt (client request).
 - Mobile is the primary access; desktop is centered and compact.

@@ -111,7 +111,8 @@ p { text-wrap: pretty; }
 .board {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 12px max(12px, env(safe-area-inset-right)) 12px max(12px, env(safe-area-inset-left));
+  /* embaixo sobra o espaço do botão de WhatsApp fixo, para ele não cobrir o fim do rodapé */
+  padding: 12px max(12px, env(safe-area-inset-right)) calc(88px + env(safe-area-inset-bottom)) max(12px, env(safe-area-inset-left));
   display: grid;
   gap: var(--gap);
   container: board / inline-size;
@@ -202,84 +203,57 @@ main { display: grid; gap: var(--gap); min-width: 0; }
 }
 
 /* ==========================================================================
-   1. Abertura: um bloco, três colunas separadas por fios
+   1. Abertura: o bloco inteiro sobre a foto; a faixa de números vem logo abaixo
    ========================================================================== */
-/* Duas linhas compartilhadas (subgrid): as duas fotos começam e terminam juntas,
-   e o enunciado e "O que fazemos" começam na mesma altura. */
 .hero {
-  display: grid;
-  grid-template-columns: minmax(0, 3fr) minmax(0, 6fr) minmax(0, 3fr);
-  grid-template-rows: minmax(0, 1fr) auto;
-  row-gap: 24px;
-  min-height: clamp(540px, 50cqi, 600px);
+  position: relative; isolation: isolate; overflow: hidden;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  min-height: clamp(520px, 56cqi, 640px);
+  background: var(--night); color: var(--light);
 }
-.hero__main, .hero__side { display: grid; grid-row: 1 / span 2; grid-template-rows: subgrid; min-width: 0; }
-.hero__side { grid-column: 1; padding-right: var(--pad); }
-.hero__main { grid-column: 2; padding-inline: var(--pad); border-inline: 1px solid var(--rule); }
-.hero__aside { grid-column: 3; grid-row: 1 / span 2; display: flex; flex-direction: column; min-width: 0; padding-left: var(--pad); }
-.hero .photo { min-height: 0; }
-.hero__main .photo img { object-position: 72% 40%; }
+.hero__photo { position: absolute; inset: 0; z-index: -1; border-radius: 0; }
+.hero__photo img { object-position: 72% 40%; }
+/* véu: a foto já vem escura e tratada; ele só garante o contraste do texto na base e à esquerda */
+.hero__photo::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  background:
+    linear-gradient(to top, color-mix(in srgb, var(--night) 90%, transparent) 0%, color-mix(in srgb, var(--night) 58%, transparent) 40%, transparent 72%),
+    linear-gradient(to right, color-mix(in srgb, var(--night) 50%, transparent), transparent 62%);
+}
 
 .statement {
   font-family: var(--font-display); font-weight: 500;
-  font-size: clamp(1.5rem, 3.1cqi, 2.375rem); line-height: 1.08; letter-spacing: -0.02em;
-  max-width: 24ch; text-wrap: balance;
+  font-size: clamp(1.625rem, 3.6cqi, 2.875rem); line-height: 1.06; letter-spacing: -0.025em;
+  max-width: 26ch; text-wrap: balance;
 }
-.statement span { color: var(--ink-soft); }
+.statement span { color: var(--light-soft); }
 
-.facts__title { font-size: var(--t-small); font-weight: 600; color: var(--ink-soft); margin-bottom: 12px; }
-.facts__list { display: grid; gap: 10px; font-weight: 500; }
-.facts__list i { font-size: 1.25rem; color: var(--green); margin-right: 6px; }
+/* "O que fazemos": lista corrida embaixo do enunciado, sobre a foto */
+.facts { margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--rule-light); }
+.facts__list { display: flex; flex-wrap: wrap; gap: 10px 28px; font-weight: 500; }
+.facts__list i { font-size: 1.25rem; color: var(--light-soft); margin-right: 6px; }
 
-/* os três números num bloco só: uma linha cada, separadas por fios */
-.stats { flex: 1; display: grid; grid-template-rows: repeat(3, minmax(0, 1fr)); }
-.stats li { display: flex; flex-direction: column; gap: 6px; padding-top: 20px; border-top: 1px solid var(--rule); }
-.stats li:first-child { padding-top: 0; border-top: 0; }
+/* faixa de resultados: três números separados por fios, num bloco fino */
+.results { padding-block: 22px; }
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.stats li { display: flex; flex-direction: column; gap: 6px; padding-left: clamp(12px, 3cqi, 32px); border-left: 1px solid var(--rule); }
+.stats li:first-child { padding-left: 0; border-left: 0; }
 .stats span { font-size: var(--t-small); font-weight: 500; color: var(--ink-soft); }
 .fig { font-family: var(--font-display); font-weight: 600; font-size: var(--t-fig); line-height: 1; letter-spacing: -0.03em; font-variant-numeric: lining-nums tabular-nums; }
-.hero__cta { display: grid; gap: 14px; justify-items: start; padding-top: 20px; border-top: 1px solid var(--rule); }
-.hero__cta .btn--wa { width: 100%; }
-.hero__cta .link { font-size: var(--t-small); font-weight: 600; }
 
 @container board (max-width: 760px) {
-  .hero { grid-template-columns: minmax(0, 1fr); grid-template-rows: none; row-gap: 0; min-height: 0; }
-  .hero__main, .hero__aside, .hero__side { grid-column: 1; grid-row: auto; padding: 0; border: 0; }
-  .hero__main { grid-row: 1; grid-template-rows: none; gap: 18px; }
-  .hero__main .photo { aspect-ratio: 4 / 3; }
-  .hero__aside { grid-row: 2; margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--rule); }
-  .stats { grid-template-columns: repeat(3, minmax(0, 1fr)); grid-template-rows: none; }
-  .stats li, .stats li:first-child { padding: 0 0 0 12px; border-top: 0; border-left: 1px solid var(--rule); }
-  .stats li:first-child { padding-left: 0; border-left: 0; }
+  .hero { min-height: min(78svh, 640px); }
+  .hero__photo img { object-position: 84% 30%; }
+  .facts { margin-top: 22px; padding-top: 16px; }
+  .facts__list { gap: 8px 20px; }
+  .results { padding-block: 18px; }
+  .stats li { padding-left: 12px; }
+  .stats li:first-child { padding-left: 0; }
   .stats span { font-size: 0.8125rem; line-height: 1.35; }
-  .hero__cta { margin-top: 20px; }
-  .hero__side { grid-row: 3; margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--rule); grid-template-rows: none; grid-template-columns: 2fr 3fr; gap: 16px; align-items: start; }
-  .hero__side .photo { aspect-ratio: 3 / 4; }
 }
 
 /* ==========================================================================
-   2. Serviços: enunciado + quatro linhas separadas por fios
-   ========================================================================== */
-.fronts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: calc(var(--pad) * 1.5); padding-top: var(--lead-in); }
-.fronts__lead { display: flex; flex-direction: column; justify-content: space-between; gap: 40px; }
-.fronts__title { display: grid; }
-.fronts__title .zag { justify-self: end; }
-.fronts__foot { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; }
-.fronts__foot p { max-width: 30ch; color: var(--ink-soft); }
-.fronts__foot .link { font-weight: 600; }
-.row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 8px 24px; padding-block: 22px; border-top: 1px solid var(--rule); }
-.row:first-child { border-top: 0; padding-top: 4px; }
-.row:last-child { padding-bottom: 0; }
-.row h3 { grid-column: 1 / -1; display: flex; align-items: center; gap: 12px; font-family: var(--font-display); font-weight: 600; font-size: clamp(1.25rem, 2.2cqi, 1.625rem); line-height: 1.1; letter-spacing: -0.02em; }
-.row h3 i { font-size: 1.5rem; color: var(--green); }
-.row .terms { font-size: var(--t-small); color: var(--ink-soft); }
-@container board (max-width: 760px) {
-  .fronts { grid-template-columns: minmax(0, 1fr); gap: 32px; }
-  .fronts__lead { gap: 24px; }
-  .row { grid-template-columns: minmax(0, 1fr); }
-}
-
-/* ==========================================================================
-   3. Portfólio: vídeos verticais (9:16) que tocam no hover
+   2. Portfólio: vídeos verticais (9:16) que tocam no hover
    ========================================================================== */
 .work { padding-top: var(--lead-in); }
 .work__head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; }
@@ -319,6 +293,36 @@ main { display: grid; gap: var(--gap); min-width: 0; }
   .reels { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   /* dez em três colunas: o último fica sozinho, então ele vai para o centro */
   .reels > :last-child { grid-column: 2; }
+}
+
+/* ==========================================================================
+   3. Serviços: enunciado + quatro linhas separadas por fios
+   ========================================================================== */
+.fronts { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: calc(var(--pad) * 1.5); padding-top: var(--lead-in); }
+.fronts__lead { display: flex; flex-direction: column; justify-content: space-between; gap: 40px; }
+.fronts__title { display: grid; }
+.fronts__title .zag { justify-self: end; }
+.fronts__foot { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; }
+.fronts__foot p { max-width: 30ch; color: var(--ink-soft); }
+.fronts__foot .link { font-weight: 600; }
+.row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 8px 24px; padding-block: 22px; border-top: 1px solid var(--rule); }
+.row:first-child { border-top: 0; padding-top: 4px; }
+.row:last-child { padding-bottom: 0; }
+.row h3 { grid-column: 1 / -1; display: flex; align-items: center; gap: 12px; font-family: var(--font-display); font-weight: 600; font-size: clamp(1.25rem, 2.2cqi, 1.625rem); line-height: 1.1; letter-spacing: -0.02em; }
+.row h3 i { font-size: 1.5rem; color: var(--green); }
+.row p { grid-column: 1 / -1; color: var(--ink-soft); }
+
+/* Com JavaScript, as linhas viram o HoverExpand_002 (src/islands/servicos.tsx): painéis claros,
+   o aberto no verde da marca. Como no método, este CSS não tem camada e vence os utilitários. */
+#servicos .expand article { background: var(--tile-2); color: var(--ink); transition: background-color 450ms var(--ease-in-out), color 450ms var(--ease-in-out); }
+#servicos .expand article:has([aria-expanded="true"]) { background: var(--field); color: var(--light); }
+#servicos .expand article:has([aria-expanded="true"]) :focus-visible { outline-color: var(--accent); }
+/* o número da linha (# 01) vem com opacity-60 da ilha: no verde dava menos de 4,5:1 */
+#servicos .expand .opacity-60 { opacity: 0.82; }
+@container board (max-width: 760px) {
+  .fronts { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  .fronts__lead { gap: 24px; }
+  .row { grid-template-columns: minmax(0, 1fr); }
 }
 
 /* ==========================================================================
@@ -577,27 +581,51 @@ main { display: grid; gap: var(--gap); min-width: 0; }
 }
 
 /* ==========================================================================
+   WhatsApp fixo no canto inferior direito (o único uso do --accent fora do formulário)
+   ========================================================================== */
+.wa-fab {
+  position: fixed; z-index: 5;
+  right: max(16px, env(safe-area-inset-right)); bottom: max(16px, env(safe-area-inset-bottom));
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  min-width: 56px; min-height: 56px; padding: 0 22px;
+  border-radius: var(--radius); background: var(--accent); color: var(--on-accent);
+  font: 700 var(--t-body)/1 var(--font-text); text-decoration: none; white-space: nowrap;
+  box-shadow: 0 10px 28px color-mix(in srgb, var(--night) 30%, transparent), 0 2px 6px color-mix(in srgb, var(--night) 22%, transparent);
+  transition: transform 140ms var(--ease-out), background-color 180ms ease;
+  -webkit-user-select: none; user-select: none;
+}
+.wa-fab i { font-size: 1.5rem; }
+.wa-fab:active { transform: scale(0.97); }
+/* o contorno padrão é --green; sobre o --accent ele some, então aqui vai o --ink */
+.wa-fab:focus-visible { outline-color: var(--ink); outline-offset: 3px; }
+@media (hover: hover) and (pointer: fine) { .wa-fab:hover { background: var(--accent-hover); } }
+/* celular: só o ícone (o nome fica no aria-label) */
+@media (max-width: 760px) {
+  .wa-fab { width: 56px; padding: 0; }
+  .wa-fab__label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+}
+
+/* ==========================================================================
    Movimento: só transform, opacity e clip-path. Sem JS, tudo aparece pronto.
    ========================================================================== */
 @keyframes rise { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: no-preference) {
   /* abertura: o cabeçalho e as colunas assentam um a um */
   .js .head__brand, .js .head__list li, .js .head__theme,
-  .js .hero__main > *, .js .hero__side > *, .js .stats li, .js .hero__cta { animation: rise 800ms var(--ease-expo) both; }
+  .js .hero__content > *, .js .stats li { animation: rise 800ms var(--ease-expo) both; }
   .js .head__brand { animation-duration: 1000ms; animation-delay: 60ms; }
   .js .head__list li:nth-child(1) { animation-delay: 120ms; }
   .js .head__list li:nth-child(2) { animation-delay: 170ms; }
   .js .head__list li:nth-child(3) { animation-delay: 220ms; }
   .js .head__list li:nth-child(4) { animation-delay: 270ms; }
   .js .head__theme { animation-delay: 320ms; }
-  .js .hero__main > :nth-child(1) { animation-delay: 300ms; }
-  .js .hero__main > :nth-child(2) { animation-delay: 380ms; }
-  .js .hero__side > :nth-child(1) { animation-delay: 340ms; }
-  .js .hero__side > :nth-child(2) { animation-delay: 420ms; }
-  .js .stats li:nth-child(1) { animation-delay: 360ms; }
-  .js .stats li:nth-child(2) { animation-delay: 420ms; }
-  .js .stats li:nth-child(3) { animation-delay: 480ms; }
-  .js .hero__cta { animation-delay: 560ms; }
+  .js .hero__content > :nth-child(1) { animation-delay: 300ms; }
+  .js .hero__content > :nth-child(2) { animation-delay: 400ms; }
+  .js .stats li:nth-child(1) { animation-delay: 460ms; }
+  .js .stats li:nth-child(2) { animation-delay: 520ms; }
+  .js .stats li:nth-child(3) { animation-delay: 580ms; }
+  /* só o atraso e a subida: sem fill-mode "forwards", para o :active (transform) continuar valendo depois */
+  .js .wa-fab { animation: rise 800ms var(--ease-expo) 900ms backwards; }
 
   /* entradas por rolagem */
   .js [data-reveal] { opacity: 0; transform: translateY(22px); transition: opacity 700ms var(--ease-out) var(--d, 0ms), transform 900ms var(--ease-expo) var(--d, 0ms); }

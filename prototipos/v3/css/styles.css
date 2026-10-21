@@ -178,9 +178,11 @@ main { display: grid; gap: var(--gap); min-width: 0; }
 }
 
 /* ==========================================================================
-   Cabeçalho: logo à esquerda, lista de seções e o tema à direita
+   Cabeçalho: a barra de cima do hero (.hero). Logo à esquerda, lista de seções e tema
+   à direita; o respiro vem do padding do hero. No desktop o logo desce para o espaço
+   vazio da foto (ver o hero); no celular ele fica na barra.
    ========================================================================== */
-.head { display: flex; align-items: center; gap: 24px; padding-block: 14px; }
+.head { display: flex; align-items: center; gap: 24px; }
 .head__brand { flex: none; margin-right: auto; border-radius: var(--radius-in); }
 .head__logo { height: clamp(40px, 4.6cqi, 54px); width: auto; }
 .head__list { display: flex; align-items: center; gap: clamp(18px, 2.6cqi, 34px); font-size: 0.9375rem; font-weight: 600; }
@@ -196,28 +198,30 @@ main { display: grid; gap: var(--gap); min-width: 0; }
 .head__theme button:hover { background: color-mix(in srgb, var(--light) 14%, transparent); }
 
 @container board (max-width: 760px) {
-  .head { flex-wrap: wrap; row-gap: 4px; padding-block: 12px 2px; }
+  .head { flex-wrap: wrap; row-gap: 4px; }
   .head__nav { order: 3; flex-basis: 100%; border-top: 1px solid var(--rule); }
   .head__list { justify-content: space-between; min-height: 52px; font-size: var(--t-small); }
   .head__theme::before { display: none; }
 }
 
 /* ==========================================================================
-   1. Abertura: o bloco inteiro sobre a foto; a faixa de números vem logo abaixo
+   1. Abertura: cabeçalho e hero num bloco só, sobre a foto; a faixa de números vem logo abaixo
    ========================================================================== */
 .hero {
   position: relative; isolation: isolate; overflow: hidden;
-  display: flex; flex-direction: column; justify-content: flex-end;
-  min-height: clamp(520px, 56cqi, 640px);
-  background: var(--night); color: var(--light);
+  display: flex; flex-direction: column;
+  min-height: clamp(600px, 64cqi, 720px);
 }
+/* a barra fica no topo; o enunciado desce para a base */
+.hero__content { margin-top: auto; }
 .hero__photo { position: absolute; inset: 0; z-index: -1; border-radius: 0; }
 .hero__photo img { object-position: 72% 40%; }
-/* véu: a foto já vem escura e tratada; ele só garante o contraste do texto na base e à esquerda */
+/* véu: a foto já vem escura e tratada; ele só garante o contraste do texto na base, à esquerda e na barra do topo */
 .hero__photo::after {
   content: ""; position: absolute; inset: 0; pointer-events: none;
   background:
     linear-gradient(to top, color-mix(in srgb, var(--night) 90%, transparent) 0%, color-mix(in srgb, var(--night) 58%, transparent) 40%, transparent 72%),
+    linear-gradient(to bottom, color-mix(in srgb, var(--night) 62%, transparent) 0%, transparent 30%),
     linear-gradient(to right, color-mix(in srgb, var(--night) 50%, transparent), transparent 62%);
 }
 
@@ -241,8 +245,25 @@ main { display: grid; gap: var(--gap); min-width: 0; }
 .stats span { font-size: var(--t-small); font-weight: 500; color: var(--ink-soft); }
 .fig { font-family: var(--font-display); font-weight: 600; font-size: var(--t-fig); line-height: 1; letter-spacing: -0.03em; font-variant-numeric: lining-nums tabular-nums; }
 
+/* desktop: a grade do hero tira o logo da barra e o põe no espaço vazio à esquerda da foto,
+   centrado entre a barra e o enunciado; a barra fica só com as seções e o tema.
+   .head vira display: contents para seus três itens entrarem direto na grade. */
+@container board (min-width: 761px) {
+  .hero {
+    display: grid; grid-template-columns: minmax(0, 1fr) auto auto; grid-template-rows: auto 1fr auto;
+    column-gap: 24px;
+  }
+  .head { display: contents; }
+  .head__brand { grid-area: 2 / 1; align-self: center; justify-self: start; margin-right: 0; }
+  .head__logo { height: auto; width: clamp(240px, 42cqi, 520px); }
+  .head__nav, .head__theme { grid-row: 1; align-self: center; }
+  .head__nav { grid-column: 2; }
+  .head__theme { grid-column: 3; }
+  .hero__content { grid-column: 1 / -1; grid-row: 3; }
+}
+
 @container board (max-width: 760px) {
-  .hero { min-height: min(78svh, 640px); }
+  .hero { min-height: min(88svh, 720px); }
   .hero__photo img { object-position: 84% 30%; }
   .facts { margin-top: 22px; padding-top: 16px; }
   .facts__list { gap: 8px 20px; }

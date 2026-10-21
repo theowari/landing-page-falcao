@@ -253,14 +253,28 @@ main { display: grid; gap: var(--gap); min-width: 0; }
 }
 
 /* ==========================================================================
-   2. Portfólio: vídeos verticais (9:16) que tocam no hover
+   2. Portfólio: uma fila de vídeos verticais (9:16) que tocam no hover
    ========================================================================== */
 .work { padding-top: var(--lead-in); }
 .work__head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; }
 .work__head .link { font-size: var(--t-small); font-weight: 600; }
+.work__tools { display: flex; align-items: center; gap: 20px; }
+/* setas: só com JavaScript e mouse; no toque a fila já desliza com o dedo */
+.work__nav { display: none; gap: 8px; }
 .work__hint { margin-top: 12px; font-size: var(--t-small); color: var(--light-soft); }
 .work__hint i { font-size: 1.1rem; margin-right: 4px; }
-.reels { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 28px var(--gap); margin-top: 32px; }
+/* Uma fila só. A rolagem é a nativa (dedo, trackpad, Shift + roda) e cada vídeo encaixa no início.
+   A fila sangra até as bordas do bloco, para o próximo vídeo aparecer pela metade e mostrar que há mais. */
+.reels {
+  --clip-w: clamp(150px, 19cqi, 232px);
+  display: flex; gap: var(--gap); margin: 32px calc(var(--pad) * -1) 0; padding-inline: var(--pad);
+  overflow-x: auto; overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory; scroll-padding-inline: var(--pad);
+  scrollbar-width: thin; scrollbar-color: var(--rule-light) transparent;
+}
+.js .reels { scrollbar-width: none; }
+.js .reels::-webkit-scrollbar { display: none; }
+.reels > li { flex: none; width: var(--clip-w); scroll-snap-align: start; }
 .clip__frame {
   position: relative; aspect-ratio: 9 / 16; overflow: hidden;
   border-radius: var(--radius-in); background: #263428;
@@ -285,14 +299,13 @@ main { display: grid; gap: var(--gap); min-width: 0; }
 @media (hover: hover) and (pointer: fine) {
   .reels:hover .clip:not(:hover) .clip__frame { opacity: 0.55; }
   .clip:hover .clip__play { transform: scale(1.12); }
+  .js .work__nav { display: flex; }
+  .work .icon-btn:hover { background: color-mix(in srgb, var(--light) 14%, transparent); }
 }
-@container board (max-width: 960px) {
-  .reels { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px var(--gap); }
-}
-@container board (min-width: 561px) and (max-width: 960px) {
-  .reels { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-  /* dez em três colunas: o último fica sozinho, então ele vai para o centro */
-  .reels > :last-child { grid-column: 2; }
+.work .icon-btn[aria-disabled="true"] { opacity: 0.35; cursor: default; }
+.work .icon-btn:focus-visible { outline-color: var(--accent); }
+@container board (max-width: 760px) {
+  .reels { --clip-w: clamp(160px, 56cqi, 240px); }
 }
 
 /* ==========================================================================

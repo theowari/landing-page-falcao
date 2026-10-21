@@ -83,11 +83,19 @@
     <section class="work panel panel--night" id="portfolio" aria-labelledby="work-title">
       <div class="work__head">
         <h2 class="work__title" id="work-title">Portfólio</h2>
-        <a class="link" href="https://www.instagram.com/creativeserjo" rel="noopener">Mais no Instagram <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>
+        <div class="work__tools">
+          <a class="link" href="https://www.instagram.com/creativeserjo" rel="noopener">Mais no Instagram <i class="ph ph-arrow-up-right" aria-hidden="true"></i></a>
+          <!-- As setas só existem com JavaScript e com mouse; no celular a fila desliza com o dedo. -->
+          <div class="work__nav">
+            <button class="icon-btn" type="button" data-reels="prev" aria-label="Vídeos anteriores" aria-controls="reels"><i class="ph ph-arrow-left" aria-hidden="true"></i></button>
+            <button class="icon-btn" type="button" data-reels="next" aria-label="Próximos vídeos" aria-controls="reels"><i class="ph ph-arrow-right" aria-hidden="true"></i></button>
+          </div>
+        </div>
       </div>
-      <p class="work__hint"><i class="ph ph-cursor-click" aria-hidden="true"></i> Passe o mouse sobre um vídeo para ele tocar. No celular, toque.</p>
+      <p class="work__hint"><i class="ph ph-cursor-click" aria-hidden="true"></i> Passe o mouse sobre um vídeo para ele tocar. No celular, toque e deslize para ver mais.</p>
 
-      <ul class="reels">
+      <!-- Uma fila só, rolável na horizontal: o dedo desliza (celular) e as setas andam (mouse). -->
+      <ul class="reels" id="reels">
         <li><figure class="clip" data-clip>
           <div class="clip__frame">
             <img class="clip__poster" src="../../assets/portfolio/posters/atencao-clientes-rede-bem.jpg" alt="" width="540" height="960" loading="lazy">

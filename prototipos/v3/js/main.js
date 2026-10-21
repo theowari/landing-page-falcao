@@ -80,6 +80,31 @@
     clips.forEach((c) => vio.observe(c));
   }
 
+  /* ---------- Portfólio: setas da fila (o CSS só as mostra com mouse; no celular o dedo desliza) ----------
+     Cada clique anda uma "página" de vídeos inteiros; o encaixe (scroll-snap) ajeita a parada.
+     aria-disabled em vez de disabled: o foco não se perde quando a seta chega ao fim. */
+  const reels = $('.reels');
+  const reelBtns = $$('[data-reels]');
+  if (reels && reelBtns.length) {
+    const first = $('li', reels);
+    const prev = $('[data-reels="prev"]');
+    const next = $('[data-reels="next"]');
+    const sync = () => {
+      const max = reels.scrollWidth - reels.clientWidth;
+      prev.setAttribute('aria-disabled', String(reels.scrollLeft <= 1));
+      next.setAttribute('aria-disabled', String(reels.scrollLeft >= max - 1));
+    };
+    reelBtns.forEach((btn) => btn.addEventListener('click', () => {
+      if (btn.getAttribute('aria-disabled') === 'true') return;
+      const step = first.offsetWidth + parseFloat(getComputedStyle(reels).columnGap || 8);
+      const page = Math.max(1, Math.floor(reels.clientWidth / step));
+      reels.scrollBy({ left: (btn === next ? 1 : -1) * page * step, behavior: reduce ? 'auto' : 'smooth' });
+    }));
+    reels.addEventListener('scroll', sync, { passive: true });
+    window.addEventListener('resize', sync);
+    sync();
+  }
+
   /* ---------- Esteiras de logos: duplica o conteúdo para o laço não ter emenda ---------- */
   $$('[data-belt]').forEach((belt) => {
     const track = $('.belt__track', belt);

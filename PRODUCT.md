@@ -14,7 +14,7 @@ web
 
 ## Product Purpose
 
-Somark Mídia is a creative, data-driven digital marketing agency: social media management, strategy, content creation, and video and photo production. The site replaces the founder's old personal Canva portfolio ("Creative Serjo") with a more detailed agency site that follows the Somark identity.
+Somark Mídia is a creative, data-driven digital marketing agency: social media management, strategy, content creation, and video and photo production. The site replaces the old personal Canva portfolio ("Creative Serjo") with a more detailed agency site that follows the Somark identity.
 
 Success is a visitor who understands what Somark does, sees that real brands trust it, picks a plan, and opens a WhatsApp conversation.
 
@@ -28,7 +28,7 @@ Three things, together:
 
 ## Operating Context
 
-- Contact and sales happen on **WhatsApp**: every plan button and the contact form open WhatsApp with a pre-written message. E-mail and Instagram are secondary.
+- Contact and sales happen on **WhatsApp**: every plan button and the contact form open WhatsApp with a pre-written message. Instagram is secondary. Official channels: WhatsApp (19) 99778-8840 and Instagram @somarkmidia. Somark has no e-mail of its own, so none appears on the site.
 - Prices are agreed in conversation. **No prices appear on the site** (client decision).
 - The working method shown to clients: Briefing, Roteiro, Aprovação, Execução.
 - Plans: **LITE** (starting out), **PRO** (most chosen), **PRIME** (accelerated results); each plan adds to the previous one. Full feature matrix in `docs/projeto.md` §3.5.
@@ -47,7 +47,7 @@ Three things, together:
 ## Brand Commitments
 
 - **Name:** Somark Mídia. "Somark" reads as *somar* + *mark*: the "+" and the idea of adding up are a real thread (numbers with "+", four services that add up, each plan adds to the last), used with meaning, never as ornament.
-- **Institutional voice:** Somark speaks as an agency and a team. **Decided 2026-10-20:** the founder, Sergio Godoy, is no longer the face of the brand; the "Sobre" section must present the agency, not him. (V2 still frames him as founder; `docs/projeto.md` lists this as open and is now out of date on this point.)
+- **Institutional voice:** Somark speaks as an agency and a team. **Decided 2026-10-20:** the founder, Alexandre Falcão, is no longer the face of the brand; the "Sobre" section must present the agency, not him. (V2 still frames him as founder; `docs/projeto.md` lists this as open and is now out of date on this point.)
 - **Brand lines from the media kit:** "Cresça conosco!", "Marketing digital é mais do que números!", "Vamos crescer juntos?".
 - **Voice:** direct and short. Keywords: crescer, somar, estratégia, assinatura. No agency clichés ("soluções inovadoras", "elevar", "next-level").
 - **Identity source:** the Somark media kit (green) is the binding identity, documented in `docs/identidade-visual.md`. The old "Creative Serjo" look (red on cream, condensed type, monospace, badges) must not return.
@@ -60,7 +60,7 @@ Three things, together:
 - **Result figures:** +95% client satisfaction, +35% social engagement, +65% sales growth, from the media kit. **Unconfirmed:** source and period must be confirmed by the client before launch.
 - **Photos:** `assets/img/` (from the media kit and the old site; origin and license unconfirmed). Prototype photos are Picsum/Unsplash placeholders.
 - **Videos:** `assets/video/` holds open-license sample clips (Wikimedia Commons) that are **not Somark work**. No real portfolio exists on the site yet.
-- **Absent, do not fabricate:** testimonials, case studies, real portfolio work, prices, team photos with confirmed identities, official Somark contact channels (current ones are Sergio's personal WhatsApp, e-mail and @creativeserjo).
+- **Absent, do not fabricate:** testimonials, case studies, real portfolio work, prices, team photos with confirmed identities, a Somark e-mail address (the agency has none).
 
 ## Product Principles
 

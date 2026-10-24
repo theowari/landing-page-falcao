@@ -7,6 +7,9 @@ import { defineConfig } from "vite";
 const root = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
+  // Raiz do site. Sem VITE_BASE fica "/" (domínio próprio, HostGator/Hostinger);
+  // no GitHub Pages o workflow passa "/landing-page-falcao/", a subpasta do projeto.
+  base: process.env.VITE_BASE ?? "/",
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: { "@": path.resolve(root, "src") },

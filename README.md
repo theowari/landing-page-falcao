@@ -63,7 +63,7 @@ Se a porta 5173 já estiver em uso, o Vite escolhe a próxima (5174, 5175...). U
 
 Com o servidor ligado, qualquer arquivo salvo atualiza a página sozinha. Para parar, aperte `Ctrl + C` no terminal.
 
-> Não abra os arquivos `.html` com duplo clique. O site usa módulos JavaScript e precisa do servidor para funcionar.
+> Não abra os arquivos `.html` com duplo clique. Durante o desenvolvimento, as páginas carregam os componentes React direto do código-fonte (`.tsx`), e só o servidor do Vite sabe traduzi-los. Isso vale só para o desenvolvimento: o site publicado usa a versão gerada pelo build (veja [Hospedagem](#hospedagem)).
 
 ## Gerar a versão final (opcional)
 
@@ -73,6 +73,37 @@ npm run preview   # serve o resultado do build em http://localhost:4173/
 ```
 
 A pasta `dist/` é gerada de novo a cada build e não vai para o Git.
+
+## Hospedagem
+
+O build transforma tudo em HTML, CSS e JavaScript comuns, com o React já embutido. Por isso qualquer hospedagem de arquivos estáticos serve, sem Node e sem configuração extra. O que vai para o ar é sempre o **conteúdo de `dist/`**, nunca o código-fonte.
+
+### GitHub Pages (demonstração para o cliente)
+
+É automático. A cada push no branch `ShadCN`, o workflow [.github/workflows/pages.yml](.github/workflows/pages.yml) roda o build e publica o `dist/`. O andamento aparece na aba **Actions** do repositório.
+
+- Endereço do v3: **https://theowari.github.io/landing-page-falcao/prototipos/v3/**
+- Configuração, uma vez só: em **Settings > Pages > Source**, escolha **GitHub Actions**.
+- O site fica numa subpasta (`/landing-page-falcao/`), e o workflow avisa o Vite disso pela variável `VITE_BASE`. Para conferir esse build na sua máquina:
+
+```bash
+VITE_BASE=/landing-page-falcao/ npm run build
+VITE_BASE=/landing-page-falcao/ npm run preview   # abra http://localhost:4173/landing-page-falcao/prototipos/v3/
+```
+
+(O `preview` também precisa da variável. Sem ela, ele serve o site na raiz e devolve a página inicial para qualquer endereço em `/landing-page-falcao/`. No PowerShell, defina a variável antes: `$env:VITE_BASE="/landing-page-falcao/"`. No Git Bash do Windows, ponha `MSYS_NO_PATHCONV=1` antes do comando, senão o Git Bash troca `/landing-page-falcao/` por `C:/Program Files/Git/landing-page-falcao/`. No GitHub Actions nada disso é preciso.)
+
+```bash
+# para voltar ao build normal depois, rode de novo sem a variável
+npm run build
+```
+
+### HostGator, Hostinger ou outra hospedagem compartilhada
+
+1. Rode `npm run build`, sem `VITE_BASE`.
+2. Envie **o que está dentro** de `dist/` para a pasta pública do domínio (normalmente `public_html`), pelo gerenciador de arquivos do painel ou por FTP.
+
+Esse build espera ficar na raiz de um domínio ou subdomínio. Se o site for para uma subpasta (por exemplo `meusite.com.br/somark/`), gere o build com `VITE_BASE=/somark/`.
 
 ## Comandos disponíveis
 

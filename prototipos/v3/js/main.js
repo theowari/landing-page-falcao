@@ -7,7 +7,7 @@
   const canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
-  const WA = 'https://wa.me/5519998406369';
+  const WA = 'https://wa.me/5519997788840';
 
   /* ---------- Entradas por rolagem (uma vez), em cascata dentro de cada grupo ---------- */
   const reveals = $$('[data-reveal]');

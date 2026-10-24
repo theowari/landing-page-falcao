@@ -10,7 +10,7 @@ Este é o documento de referência da identidade visual do site. Quando houver d
 
 ## 1. Essência
 
-- **Quem:** Somark Mídia, agência criativa e orientada por dados, fundada por Sergio Godoy. Gestão de redes, estratégia, criação de conteúdo, filmagens e fotos.
+- **Quem:** Somark Mídia, agência criativa e orientada por dados, fundada por Alexandre Falcão. Gestão de redes, estratégia, criação de conteúdo, filmagens e fotos.
 - **Sensação:** confiança e proximidade. Mais agência do que autor, mais tech do que corporativo frio.
 - **Ideia que costura o site:** "Somark" lê-se como **somar + mark**. Números com "+", quatro frentes que somam, briefing + roteiro + aprovação = execução, cada plano soma ao anterior. Vale usar o "+" como recurso de texto, sempre com sentido, nunca como enfeite.
 - **Frases da marca (do PDF):** "Cresça conosco!", "Marketing digital é mais do que números!", "Vamos crescer juntos?".
@@ -139,7 +139,7 @@ Regras: título com no máximo 2 linhas em qualquer largura; texto corrido com 1
 | `megaphone.webp` | Megafone 3D sobre um post de rede social, em verde escuro |
 | `store.webp` | Fachada da Cores & Cia |
 | `coffee.webp` | Mãos com grãos de café |
-| `founder.webp` | Retrato preto e branco de um homem de boné branco, do site antigo do Sergio |
+| `founder.webp` | Retrato preto e branco de um homem de boné branco, do site antigo (Creative Serjo) |
 
 - **Logos de clientes:** `assets/logos/` (18 arquivos, baixa resolução, até 440 px). Uso: esteira automática, em blocos claros ou verdes conforme a cor do logo.
 - **Vídeos do portfólio:** são vídeos **do próprio site**, sem YouTube. Formato dos reais: **MP4 H.264**, vertical 9:16 de preferência, comprimidos (até uns 8 MB). Tocam sozinhos e sem som no hover; no celular, tocam ao toque.
@@ -179,7 +179,7 @@ Regras: título com no máximo 2 linhas em qualquer largura; texto corrido com 1
 
 ## 10. O que não seguir: a identidade antiga
 
-O site anterior (Canva, "Creative Serjo", portfólio pessoal do Sergio) usava **vermelho `#F40002` sobre creme `#EAE8DD`**, títulos gigantes em fonte condensada, texto em monoespaçada, estrelas e selos serrilhados, e fotos de cantos muito arredondados. **Isso não faz parte da identidade da Somark e não deve voltar.** Do site antigo só aproveitamos o **conteúdo** (ver `projeto.md`).
+O site anterior (Canva, "Creative Serjo", portfólio pessoal) usava **vermelho `#F40002` sobre creme `#EAE8DD`**, títulos gigantes em fonte condensada, texto em monoespaçada, estrelas e selos serrilhados, e fotos de cantos muito arredondados. **Isso não faz parte da identidade da Somark e não deve voltar.** Do site antigo só aproveitamos o **conteúdo** (ver `projeto.md`).
 
 ---
 

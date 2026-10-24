@@ -2,7 +2,7 @@
 
 Este documento reúne o contexto, as decisões, o conteúdo de origem e o que falta. A **identidade visual** (cor, fonte, logo, forma, tom) está em [identidade-visual.md](identidade-visual.md).
 
-- **Cliente:** Sergio Godoy ("Serjo", apelido "Falcão"), dono da **Somark Mídia**, agência criativa e orientada por dados. "Falcão" é o apelido dele e explica o nome da pasta do projeto.
+- **Cliente:** Alexandre Falcão, dono da **Somark Mídia**, agência criativa e orientada por dados. O sobrenome "Falcão" explica o nome da pasta do projeto.
 - **Pedido:** um site novo, **mais detalhado**, no lugar do site atual feito no Canva ("Creative Serjo"), seguindo a identidade da Somark.
 - **Itens marcados com ⚠️** precisam de confirmação.
 
@@ -13,7 +13,7 @@ Este documento reúne o contexto, as decisões, o conteúdo de origem e o que fa
 | # | Decisão | Quem decidiu |
 |---|---|---|
 | 1 | A identidade a seguir é a do **PDF da Somark** (verde). Ver `identidade-visual.md` | Cliente, via João Otávio |
-| 2 | O Sergio é dono da Somark. Mantemos os nomes: Sergio Godoy, Serjo, Creative Serjo, Somark Mídia | João Otávio |
+| 2 | O Alexandre Falcão é dono da Somark. Mantemos os nomes: Alexandre Falcão, Somark Mídia | João Otávio |
 | 3 | O texto fica no **plural** ("Somos uma agência…") | João Otávio |
 | 4 | **Logo e imagens finais** serão pedidos ao cliente depois | João Otávio |
 | 5 | **Tipografia B** (Fraunces nos títulos, Montserrat no texto). Cliente ainda não confirmou | João Otávio |
@@ -26,7 +26,7 @@ Este documento reúne o contexto, as decisões, o conteúdo de origem e o que fa
 | 12 | **Ícones Phosphor** | João Otávio |
 | 13 | V1 mantido em `prototipos/v1`; V2 em `prototipos/v2` | João Otávio |
 | 14 | **V3** em `prototipos/v3`, ramificado da V2, é a versão atual | João Otávio |
-| 15 | A marca fala como **agência institucional**: o Sergio deixa de ser o rosto da marca e o "Sobre" apresenta a agência | João Otávio (2026-10-20) |
+| 15 | A marca fala como **agência institucional**: o Alexandre deixa de ser o rosto da marca e o "Sobre" apresenta a agência | João Otávio (2026-10-20) |
 
 ---
 
@@ -98,7 +98,7 @@ Só o **texto** é aproveitado. O visual antigo não segue (ver `identidade-visu
 **Sobre-mim**, em primeira pessoa:
 > Sou **Sergio Godoy**, tenho 23 anos, alguns me conhecem como **Serjo**. A criatividade sempre foi natural pra mim: nunca enxerguei o cotidiano como algo comum. Desde pequeno crio histórias na minha mente; hoje, tenho as ferramentas para colocá-las no mundo. Sou versátil, aberto a ideias e crio fora da caixa, sempre com a estratégia necessária para que o conteúdo funcione dentro da linguagem do marketing
 
-⚠️ Fala de uma pessoa ("tenho 23 anos"); o site novo é da agência, no plural. No V2, o "Sobre" apresenta o Sergio como fundador e reaproveita a ideia e uma frase.
+⚠️ Fala de uma pessoa ("tenho 23 anos"); o site novo é da agência, no plural. No V2, o "Sobre" apresenta o Alexandre como fundador e reaproveita a ideia e uma frase.
 
 **Portfólio.** Título "PORTFOLIO", legenda "Algumas produções:". Três cartões verticais de cantos arredondados (corrida em fundo verde, moedor de café com luz azul, cabeleireiro atendendo cliente). **São vídeos que tocam dentro do próprio site**, não fotos. A primeira imagem aparecia girada 90° no site antigo.
 
@@ -121,18 +121,17 @@ Só o **texto** é aproveitado. O visual antigo não segue (ver `identidade-visu
 
 | Canal | Valor |
 |---|---|
-| WhatsApp | (19) 99840-6369 |
-| E-mail | sergio.godoyoliveira@gmail.com ⚠️ confirmar a grafia |
-| Instagram | @creativeserjo |
+| WhatsApp | (19) 99778-8840 |
+| Instagram | @somarkmidia |
 
-⚠️ São os contatos **pessoais** do Sergio. Confirmar se a Somark tem canais próprios.
+A Somark não tem e-mail próprio, então nenhum e-mail aparece no site.
 
 ---
 
 ## 6. Referências
 
 - Site antigo no Canva: https://portifolio-site-ss.my.canva.site/creativeserjo (renderizado por JavaScript, só abre no navegador)
-- Instagram do Sergio: https://www.instagram.com/creativeserjo
+- Instagram do site antigo (Creative Serjo): https://www.instagram.com/creativeserjo
 
 ---
 
@@ -172,7 +171,7 @@ A página é um quadro de blocos encaixados, centralizado e compacto no desktop,
 4. **Método:** sanfona Briefing → Roteiro → Aprovação → Execução.
 5. **Marcas:** duas esteiras de logos em sentidos opostos, que pausam no hover.
 6. **Planos:** tabela grande sem preços, com o PRO em neon; no celular, um card por plano.
-7. **Sobre:** Sergio como fundador, citação do site antigo e quatro fatos.
+7. **Sobre:** Alexandre como fundador, sobre a foto da equipe ocupando o bloco inteiro, e quatro fatos.
 8. **Contato:** faixa de fotos e formulário de três células que abre o WhatsApp com a mensagem pronta.
 9. **Rodapé:** links e o nome "Somark" montado em blocos de cor.
 

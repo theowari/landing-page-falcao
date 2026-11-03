@@ -1,0 +1,119 @@
+/* Ilhas React (shadcn / Skiper UI) dentro das páginas estáticas.
+   Sem preflight: o reset fica por conta de prototipos/v2/css/styles.css.
+   Tudo aqui vive em camadas, então o CSS sem camada do v2 sempre vence. */
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* As cores e fontes vêm das variáveis de :root do v2 (--night, --field, --font-display...). */
+@theme inline {
+  --font-sans: var(--font-text);
+  --font-heading: var(--font-display);
+  --font-serif: var(--font-display);
+
+  --color-desk: var(--desk);
+  --color-tile: var(--tile);
+  --color-tile-2: var(--tile-2);
+  --color-sage: var(--sage);
+  --color-field: var(--field);
+  --color-night: var(--night);
+  --color-green: var(--green);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-light: var(--light);
+  --color-light-soft: var(--light-soft);
+
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+}
+
+/* Tokens do shadcn mapeados para a paleta da Somark.
+   --accent e --radius não são redefinidos: já existem no v2 (#00FF8C e 6px). */
+@layer base {
+  :root {
+    --background: var(--desk);
+    --foreground: var(--ink);
+    --card: var(--tile);
+    --card-foreground: var(--ink);
+    --popover: var(--tile);
+    --popover-foreground: var(--ink);
+    --primary: var(--field);
+    --primary-foreground: var(--light);
+    --secondary: var(--tile-2);
+    --secondary-foreground: var(--ink);
+    --muted: var(--tile-2);
+    --muted-foreground: var(--ink-soft);
+    --accent-foreground: var(--ink);
+    --destructive: #b3261e;
+    --border: color-mix(in srgb, var(--ink) 12%, transparent);
+    --input: color-mix(in srgb, var(--ink) 18%, transparent);
+    --ring: var(--green);
+
+    /* curvas usadas pelo CSS da View Transition do Skiper 26 (useThemeToggle) */
+    --expo-out: var(--ease-expo);
+    --expo-in: cubic-bezier(0.7, 0, 0.84, 0);
+
+    /* Cursor que segue o mouse (Skiper 61, src/islands/cursor.tsx).
+       Claro: verde da marca com um fio claro, que separa o bloco dos fundos escuros. */
+    --follow-fill: var(--field);
+    --follow-edge: color-mix(in srgb, var(--light) 85%, transparent);
+    --follow-wash: color-mix(in srgb, var(--field) 10%, transparent);
+    --follow-glow: transparent;
+
+    /* Preenchimento dos links (Link004, src/islands/links.tsx): inverte o bloco onde o
+       link está. Claro: verde da marca com texto claro. */
+    --link-fill: var(--field);
+    --link-on-fill: var(--light);
+  }
+
+  /* Escuro: o --accent neon brilha no fundo escuro; o fio escuro o separa dos blocos claros. */
+  .dark {
+    --follow-fill: var(--accent);
+    --follow-edge: var(--night);
+    --follow-wash: color-mix(in srgb, var(--accent) 12%, transparent);
+    --follow-glow: color-mix(in srgb, var(--accent) 40%, transparent);
+
+    --link-fill: var(--ink);
+    --link-on-fill: var(--tile);
+  }
+
+  /* Blocos que já são escuros nos dois temas: o preenchimento é claro. */
+  .tile--field {
+    --link-fill: var(--light);
+    --link-on-fill: var(--field);
+  }
+  .tile--night {
+    --link-fill: var(--light);
+    --link-on-fill: var(--night);
+  }
+
+  /* O !important numa camada vence os cursor: pointer sem camada do v2. */
+  .has-follow,
+  .has-follow * {
+    cursor: none !important;
+  }
+}

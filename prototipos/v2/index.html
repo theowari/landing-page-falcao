@@ -16,7 +16,16 @@
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
   <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css">
   <link rel="stylesheet" href="css/styles.css">
-  <script>document.documentElement.classList.add('js');</script>
+  <script>
+    document.documentElement.classList.add('js');
+    // Tema salvo pelo botão (src/islands/tema.tsx), aplicado antes da primeira pintura.
+    try {
+      if (localStorage.getItem('somark-theme') === 'dark') {
+        document.documentElement.classList.add('dark');
+        document.documentElement.style.colorScheme = 'dark';
+      }
+    } catch (e) {}
+  </script>
 </head>
 <body>
 <nav aria-label="Atalho"><a class="skip" href="#servicos">Pular para o conteúdo</a></nav>
@@ -26,9 +35,10 @@
   <!-- ============ 1. Abertura: nome, atalhos e trilhos ============ -->
   <section class="hero" aria-labelledby="hero-title">
     <div class="band tile tile--field">
-      <h1 class="band__name" id="hero-title">Somark Mídia<span class="vh">: agência de marketing digital</span></h1>
+      <h1 class="band__name" id="hero-title"><img class="band__logo" src="../../assets/brand/somark-logo-branco.png" alt="Somark Mídia" width="903" height="367"><span class="vh">: agência de marketing digital</span></h1>
     </div>
 
+    <!-- Com JavaScript, src/islands/tema.tsx acrescenta aqui o bloco do tema claro/escuro. -->
     <nav class="jumps" aria-label="Seções">
       <a class="jump tile" href="#servicos">Serviços <i class="ph ph-arrow-down-right" aria-hidden="true"></i></a>
       <a class="jump tile" href="#portfolio">Portfólio <i class="ph ph-arrow-down-right" aria-hidden="true"></i></a>
@@ -136,7 +146,9 @@
     </div>
   </section>
 
-  <!-- ============ 4. Método: sanfona de painéis tingidos ============ -->
+  <!-- ============ 4. Método: sanfona de painéis tingidos ============
+       Com JavaScript, src/islands/metodo.tsx troca [data-stages] pelo HoverExpand_001 (Skiper UI),
+       lendo título, texto e ícone daqui. Sem JavaScript, fica esta sanfona. -->
   <section class="method tile" id="metodo" aria-labelledby="method-title">
     <div class="method__intro">
       <h2 class="method__title" id="method-title" data-reveal>Como trabalhamos</h2>
@@ -221,14 +233,14 @@
       </thead>
       <tbody>
         <tr><th scope="row">Posts por mês</th><td>Até 12</td><td class="rec">Até 16</td><td>Até 20</td></tr>
-        <tr><th scope="row">Gestão de redes sociais</th><td>Incluída</td><td class="rec">Incluída</td><td>Incluída</td></tr>
-        <tr><th scope="row">Copywriting para anúncios</th><td>Incluído</td><td class="rec">Incluído</td><td>Incluído</td></tr>
-        <tr><th scope="row">Produção audiovisual</th><td>Incluída</td><td class="rec">Incluída</td><td>Incluída</td></tr>
-        <tr><th scope="row">Cobertura de eventos</th><td class="no">Não</td><td class="rec">Incluída</td><td>Incluída</td></tr>
-        <tr><th scope="row">Acompanhamento da agência</th><td class="no">Não</td><td class="rec">Semanal</td><td>Diário</td></tr>
-        <tr><th scope="row">Google Meu Negócio</th><td class="no">Não</td><td class="rec no">Não</td><td>Incluído</td></tr>
-        <tr><th scope="row">Reuniões quinzenais</th><td class="no">Não</td><td class="rec no">Não</td><td>Incluídas</td></tr>
-        <tr><th scope="row">Desenvolvimento de sites</th><td class="no">Não</td><td class="rec no">Não</td><td>Incluído</td></tr>
+        <tr><th scope="row">Gestão de redes sociais</th><td><i class="ph ph-check" aria-hidden="true"></i><span class="vh">Incluída</span></td><td class="rec"><i class="ph ph-check" aria-hidden="true"></i><span class="vh">Incluída</span></td><td><i class="ph ph-check" aria-hidden="true"></i><span class="vh">Incluída</span></td></tr>
+        <tr><th scope="row">Copywriting para anúncios</th><td><i class="ph ph-check" aria-hidden="true"></i><span class="vh">Incluído</span></td><td class="rec"><i class="ph ph-check" aria-hidden="true"></i><span class="vh">Incluído</span></td><td><i class="ph ph-check" aria-hidden="true"></i><span class="vh">Incluído</span></td></tr>
+        <tr><th scope="row">Produção audiovisual</th><td><i class="ph ph-check" aria-hidden="true"></i><span class="vh">Incluída</span></td><td class="rec"><i class="ph ph-check" aria-hidden="true"></i><span class="vh">Incluída</span></td><td><i class="ph ph-check" aria-hidden="true"></i><span class="vh">Incluída</span></td></tr>
+        <tr><th scope="row">Cobertura de eventos</th><td class="no"><i class="ph ph-x" aria-hidden="true"></i><span class="vh">Não incluída</span></td><td class="rec"><i class="ph ph-check" aria-hidden="true"></i><span class="vh">Incluída</span></td><td><i class="ph ph-check" aria-hidden="true"></i><span class="vh">Incluída</span></td></tr>
+        <tr><th scope="row">Acompanhamento da agência</th><td class="no"><i class="ph ph-x" aria-hidden="true"></i><span class="vh">Não incluído</span></td><td class="rec">Semanal</td><td>Diário</td></tr>
+        <tr><th scope="row">Google Meu Negócio</th><td class="no"><i class="ph ph-x" aria-hidden="true"></i><span class="vh">Não incluído</span></td><td class="rec no"><i class="ph ph-x" aria-hidden="true"></i><span class="vh">Não incluído</span></td><td><i class="ph ph-check" aria-hidden="true"></i><span class="vh">Incluído</span></td></tr>
+        <tr><th scope="row">Reuniões quinzenais</th><td class="no"><i class="ph ph-x" aria-hidden="true"></i><span class="vh">Não incluídas</span></td><td class="rec no"><i class="ph ph-x" aria-hidden="true"></i><span class="vh">Não incluídas</span></td><td><i class="ph ph-check" aria-hidden="true"></i><span class="vh">Incluídas</span></td></tr>
+        <tr><th scope="row">Desenvolvimento de sites</th><td class="no"><i class="ph ph-x" aria-hidden="true"></i><span class="vh">Não incluído</span></td><td class="rec no"><i class="ph ph-x" aria-hidden="true"></i><span class="vh">Não incluído</span></td><td><i class="ph ph-check" aria-hidden="true"></i><span class="vh">Incluído</span></td></tr>
       </tbody>
       <tfoot>
         <tr>
@@ -330,36 +342,61 @@
     </div>
   </section>
 
-  <!-- ============ Rodapé: a marca construída em blocos ============ -->
-  <footer class="foot tile" aria-labelledby="foot-title">
+  <!-- ============ Rodapé ============
+       Com JavaScript, src/islands/links.tsx troca os a.link (aqui e nas outras seções, menos a abertura) pelo Link004 (Skiper UI). -->
+  <footer class="foot tile tile--field" aria-labelledby="foot-title">
     <h2 class="vh" id="foot-title">Somark Mídia</h2>
-    <div class="foot__cols">
-      <nav aria-label="Navegação do rodapé">
-        <p class="foot__head">Página</p>
-        <a class="link" href="#servicos">Serviços</a>
-        <a class="link" href="#portfolio">Portfólio</a>
-        <a class="link" href="#metodo">Método</a>
-        <a class="link" href="#planos">Planos</a>
-      </nav>
-      <nav aria-label="Contato">
-        <p class="foot__head">Contato</p>
-        <a class="link" href="https://wa.me/5519998406369" data-wa><i class="ph ph-whatsapp-logo" aria-hidden="true"></i> (19) 99840-6369</a>
-        <a class="link" href="mailto:sergio.godoyoliveira@gmail.com"><i class="ph ph-envelope-simple" aria-hidden="true"></i> E-mail</a>
-        <a class="link" href="https://www.instagram.com/creativeserjo" rel="noopener"><i class="ph ph-instagram-logo" aria-hidden="true"></i> Instagram</a>
-      </nav>
-      <p class="foot__note">Agência criativa e orientada por dados. Gestão de redes, estratégia, criação de conteúdo, filmagens e fotos.</p>
+
+    <!-- Esquerda: a Somark -->
+    <div class="foot__side foot__side--somark">
+      <div class="foot__brand">
+        <img class="foot__logo" src="../../assets/brand/somark-logo-branco.png" alt="Somark Mídia" width="903" height="367" loading="lazy">
+        <p class="foot__note">Agência criativa e orientada por dados. Gestão de redes, estratégia, criação de conteúdo, filmagens e fotos.</p>
+      </div>
+      <div class="foot__navs">
+        <nav aria-label="Navegação do rodapé">
+          <p class="foot__head">Página</p>
+          <a class="link" href="#servicos">Serviços</a>
+          <a class="link" href="#portfolio">Portfólio</a>
+          <a class="link" href="#metodo">Método</a>
+          <a class="link" href="#planos">Planos</a>
+        </nav>
+        <nav aria-label="Contato da Somark">
+          <p class="foot__head">Contato</p>
+          <a class="link" href="https://wa.me/5519998406369" data-wa><i class="ph ph-whatsapp-logo" aria-hidden="true"></i> (19) 99840-6369</a>
+          <a class="link" href="mailto:sergio.godoyoliveira@gmail.com"><i class="ph ph-envelope-simple" aria-hidden="true"></i> E-mail</a>
+          <a class="link" href="https://www.instagram.com/creativeserjo" rel="noopener"><i class="ph ph-instagram-logo" aria-hidden="true"></i> Instagram</a>
+        </nav>
+      </div>
+      <div class="foot__last">
+        <p>© 2026 Somark Mídia · Fotos provisórias: Unsplash, via Picsum</p>
+      </div>
     </div>
-    <div class="blocks" aria-hidden="true">
-      <span style="--h:100%" class="b1">S</span><span style="--h:78%" class="b2">o</span><span style="--h:88%" class="b3">m</span><span style="--h:64%" class="b4">a</span><span style="--h:92%" class="b5">r</span><span style="--h:72%" class="b6">k</span>
-    </div>
-    <div class="foot__last">
-      <p>© 2026 Somark Mídia · Fotos provisórias: Unsplash, via Picsum</p>
-      <a class="btn btn--small" href="#topo"><i class="ph ph-arrow-up" aria-hidden="true"></i> Topo</a>
+
+    <!-- Direita: créditos à Zora -->
+    <div class="foot__side foot__side--zora">
+      <div class="foot__credit">
+        <p class="foot__head">Site criado por</p>
+        <p class="foot__zora">Zora</p>
+      </div>
+      <nav aria-label="Contato da Zora">
+        <a class="link" href="https://wa.me/5519992799095" rel="noopener"><i class="ph ph-whatsapp-logo" aria-hidden="true"></i> (19) 99279-9095</a>
+        <a class="link" href="mailto:contato.joaotaviomelqui@gmail.com"><i class="ph ph-envelope-simple" aria-hidden="true"></i> contato.joaotaviomelqui@gmail.com</a>
+        <a class="link" href="https://www.instagram.com/zoora.dev" rel="noopener"><i class="ph ph-instagram-logo" aria-hidden="true"></i> @zoora.dev</a>
+      </nav>
+      <div class="foot__last">
+        <p>© 2026 Zora. Desenvolvido por <a class="link" href="https://www.easylanding.com.br/" rel="noopener">Zora</a></p>
+        <a class="btn btn--small" href="#topo"><i class="ph ph-arrow-up" aria-hidden="true"></i> Topo</a>
+      </div>
     </div>
   </footer>
 
 </main>
 
-<script src="js/main.js" defer></script>
+<script type="module" src="js/main.js"></script>
+<script type="module" src="/src/islands/metodo.tsx"></script>
+<script type="module" src="/src/islands/links.tsx"></script>
+<script type="module" src="/src/islands/tema.tsx"></script>
+<script type="module" src="/src/islands/cursor.tsx"></script>
 </body>
 </html>
